@@ -1,24 +1,69 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HomeHero } from "@/components/sections/home-hero";
+import {
+  WhoWeAreSection,
+  CapabilitiesSection,
+  SolutionsSection,
+  IndustriesSection,
+  TechnologyEcosystemSection,
+  StudioSection,
+  SelectedWorkSection,
+  PartnersSection,
+  InsightsSection,
+} from "@/components/sections/home-sections";
+import { CtaSection } from "@/components/sections/cta-section";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "AICO — Advanced Imagination ITS Company | AI, Immersive & Spatial Technology";
+const description =
+  "AICO is a Saudi technology company engineering artificial intelligence, immersive technology, spatial computing, CGI and immersive media systems for global organisations.";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Advanced Imagination ITS Company",
+          alternateName: "AICO",
+          description,
+          address: { "@type": "PostalAddress", addressCountry: "SA" },
+        }),
+      },
+    ],
+  }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function HomePage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <>
+      <HomeHero />
+      <WhoWeAreSection />
+      <CapabilitiesSection />
+      <SolutionsSection />
+      <IndustriesSection />
+      <TechnologyEcosystemSection />
+      <StudioSection />
+      <SelectedWorkSection />
+      <PartnersSection />
+      <InsightsSection />
+      <CtaSection
+        title="Let's design the system your next decade depends on"
+        description="Tell us about the environment, audience or dataset you need to bring to life. We will assemble the right team and show you what is possible."
+        secondary={{ label: "Explore solutions", to: "/solutions" }}
       />
-    </div>
+    </>
   );
 }
