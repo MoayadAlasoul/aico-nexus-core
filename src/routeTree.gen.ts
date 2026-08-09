@@ -10,8 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ImmersiveContentStudioRouteImport } from './routes/immersive-content-studio'
 import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as OurApproachRouteImport } from './routes/our-approach'
+import { Route as TechnologyEcosystemRouteImport } from './routes/technology-ecosystem'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
 
 const IndexRoute = IndexRouteImport.update({
@@ -19,14 +23,34 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImmersiveContentStudioRoute = ImmersiveContentStudioRouteImport.update({
+  id: '/immersive-content-studio',
+  path: '/immersive-content-studio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustriesRoute = IndustriesRouteImport.update({
   id: '/industries',
   path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InsightsRoute = InsightsRouteImport.update({
+  id: '/insights',
+  path: '/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OurApproachRoute = OurApproachRouteImport.update({
   id: '/our-approach',
   path: '/our-approach',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TechnologyEcosystemRoute = TechnologyEcosystemRouteImport.update({
+  id: '/technology-ecosystem',
+  path: '/technology-ecosystem',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WhoWeAreRoute = WhoWeAreRouteImport.update({
@@ -37,35 +61,76 @@ const WhoWeAreRoute = WhoWeAreRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/immersive-content-studio': typeof ImmersiveContentStudioRoute
   '/industries': typeof IndustriesRoute
+  '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/immersive-content-studio': typeof ImmersiveContentStudioRoute
   '/industries': typeof IndustriesRoute
+  '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/immersive-content-studio': typeof ImmersiveContentStudioRoute
   '/industries': typeof IndustriesRoute
+  '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/industries' | '/our-approach' | '/who-we-are'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/immersive-content-studio'
+    | '/industries'
+    | '/insights'
+    | '/our-approach'
+    | '/technology-ecosystem'
+    | '/who-we-are'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/industries' | '/our-approach' | '/who-we-are'
-  id: '__root__' | '/' | '/industries' | '/our-approach' | '/who-we-are'
+  to:
+    | '/'
+    | '/contact'
+    | '/immersive-content-studio'
+    | '/industries'
+    | '/insights'
+    | '/our-approach'
+    | '/technology-ecosystem'
+    | '/who-we-are'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/immersive-content-studio'
+    | '/industries'
+    | '/insights'
+    | '/our-approach'
+    | '/technology-ecosystem'
+    | '/who-we-are'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  ImmersiveContentStudioRoute: typeof ImmersiveContentStudioRoute
   IndustriesRoute: typeof IndustriesRoute
+  InsightsRoute: typeof InsightsRoute
   OurApproachRoute: typeof OurApproachRoute
+  TechnologyEcosystemRoute: typeof TechnologyEcosystemRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
 }
 
@@ -78,6 +143,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/immersive-content-studio': {
+      id: '/immersive-content-studio'
+      path: '/immersive-content-studio'
+      fullPath: '/immersive-content-studio'
+      preLoaderRoute: typeof ImmersiveContentStudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries': {
       id: '/industries'
       path: '/industries'
@@ -85,11 +164,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/insights': {
+      id: '/insights'
+      path: '/insights'
+      fullPath: '/insights'
+      preLoaderRoute: typeof InsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/our-approach': {
       id: '/our-approach'
       path: '/our-approach'
       fullPath: '/our-approach'
       preLoaderRoute: typeof OurApproachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/technology-ecosystem': {
+      id: '/technology-ecosystem'
+      path: '/technology-ecosystem'
+      fullPath: '/technology-ecosystem'
+      preLoaderRoute: typeof TechnologyEcosystemRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/who-we-are': {
@@ -104,8 +197,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  ImmersiveContentStudioRoute: ImmersiveContentStudioRoute,
   IndustriesRoute: IndustriesRoute,
+  InsightsRoute: InsightsRoute,
   OurApproachRoute: OurApproachRoute,
+  TechnologyEcosystemRoute: TechnologyEcosystemRoute,
   WhoWeAreRoute: WhoWeAreRoute,
 }
 export const routeTree = rootRouteImport
