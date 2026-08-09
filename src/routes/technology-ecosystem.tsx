@@ -41,7 +41,7 @@ function EcosystemPage() {
           description="Select a layer to see the components we design, integrate and operate."
         />
         <Reveal delay={80} className="mt-12">
-          <Tabs defaultValue={technologyLayers[0]?.name}>
+          <Tabs defaultValue={technologyLayers[0]!.name}>
             <TabsList className="flex h-auto w-full flex-wrap justify-start gap-2 bg-transparent p-0">
               {technologyLayers.map((layer) => (
                 <TabsTrigger

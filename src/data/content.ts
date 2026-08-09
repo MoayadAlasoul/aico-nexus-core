@@ -13,7 +13,7 @@ export const projects: Project[] = [
     category: "Domes & Digital Environments",
     description:
       "Capability sample: a fulldome show structure combining projection engineering, spatial audio and modular content programming.",
-    image: "/images/gallery/work-dome.jpg",
+    image: "/images/solutions/immersive-domes-digital-environments.jpg",
     disciplines: ["Experience design", "Show control", "Content production"],
   },
   {
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     category: "Spatial Computing",
     description:
       "Capability sample: a live operational twin linking reality capture, telemetry and scenario simulation in one spatial interface.",
-    image: "/images/gallery/work-twin.jpg",
+    image: "/images/solutions/spatial-computing.jpg",
     disciplines: ["Reality capture", "Data pipelines", "Real-time UI"],
   },
   {
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     category: "Artificial Intelligence",
     description:
       "Capability sample: a retrieval-grounded assistant with citation tracing, evaluation harness and human escalation paths.",
-    image: "/images/gallery/work-ai.jpg",
+    image: "/images/solutions/artificial-intelligence.jpg",
     disciplines: ["Retrieval architecture", "Evaluation", "Interface design"],
   },
   {
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     category: "CGI & 3D Visualization",
     description:
       "Capability sample: photoreal masterplan imagery and animation produced from a single reusable asset pipeline.",
-    image: "/images/gallery/work-cgi.jpg",
+    image: "/images/solutions/cgi-3d-visualization.jpg",
     disciplines: ["Look development", "Environment art", "Technical animation"],
   },
   {
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     category: "Immersive Content Studio",
     description:
       "Capability sample: an LED volume workflow with real-time compositing, camera tracking and on-set finishing.",
-    image: "/images/gallery/work-studio.jpg",
+    image: "/images/studio/stage.jpg",
     disciplines: ["Virtual production", "Real-time graphics", "Post pipeline"],
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     category: "Immersive Live Streaming",
     description:
       "Capability sample: multi-camera immersive capture with augmented graphics and redundant low-latency distribution.",
-    image: "/images/gallery/work-live.jpg",
+    image: "/images/solutions/immersive-live-streaming.jpg",
     disciplines: ["Live operations", "AR graphics", "Distribution"],
   },
 ];
@@ -86,7 +86,7 @@ export const insights: Insight[] = [
     category: "Perspective",
     readingTime: "6 min read",
     date: "2026-05-18",
-    image: "/images/home/insight-spatial.jpg",
+    image: "/images/solutions/spatial-computing.jpg",
   },
   {
     slug: "governed-ai-production",
@@ -96,7 +96,7 @@ export const insights: Insight[] = [
     category: "Engineering",
     readingTime: "8 min read",
     date: "2026-04-02",
-    image: "/images/home/insight-ai.jpg",
+    image: "/images/solutions/artificial-intelligence.jpg",
   },
   {
     slug: "designing-for-dome-geometry",
@@ -106,7 +106,7 @@ export const insights: Insight[] = [
     category: "Craft",
     readingTime: "5 min read",
     date: "2026-02-24",
-    image: "/images/home/insight-dome.jpg",
+    image: "/images/solutions/immersive-domes-digital-environments.jpg",
   },
 ];
 

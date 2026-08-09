@@ -7,6 +7,7 @@ import { Panel, Pill } from "@/components/ui/primitives";
 import { Media } from "@/components/ui/media";
 import { Button } from "@/components/ui/button";
 import { solutions, getSolution } from "@/data/solutions";
+import type { Solution } from "@/types";
 
 export const Route = createFileRoute("/solutions/$slug")({
   loader: ({ params }) => {
@@ -38,7 +39,7 @@ export const Route = createFileRoute("/solutions/$slug")({
 });
 
 function SolutionPage() {
-  const { solution } = Route.useLoaderData();
+  const { solution } = Route.useLoaderData() as { solution: Solution };
   const related = solutions.filter((s) => s.slug !== solution.slug).slice(0, 3);
 
   return (

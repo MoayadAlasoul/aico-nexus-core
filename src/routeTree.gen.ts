@@ -15,8 +15,11 @@ import { Route as ImmersiveContentStudioRouteImport } from './routes/immersive-c
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as OurApproachRouteImport } from './routes/our-approach'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TechnologyEcosystemRouteImport } from './routes/technology-ecosystem'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
+import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
+import { Route as SolutionsSlugRouteImport } from './routes/solutions.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -48,6 +51,11 @@ const OurApproachRoute = OurApproachRouteImport.update({
   path: '/our-approach',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TechnologyEcosystemRoute = TechnologyEcosystemRouteImport.update({
   id: '/technology-ecosystem',
   path: '/technology-ecosystem',
@@ -58,6 +66,16 @@ const WhoWeAreRoute = WhoWeAreRouteImport.update({
   path: '/who-we-are',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
+  id: '/solutions/',
+  path: '/solutions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsSlugRoute = SolutionsSlugRouteImport.update({
+  id: '/solutions/$slug',
+  path: '/solutions/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -66,8 +84,11 @@ export interface FileRoutesByFullPath {
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/solutions/$slug': typeof SolutionsSlugRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -76,8 +97,11 @@ export interface FileRoutesByTo {
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/solutions/$slug': typeof SolutionsSlugRoute
+  '/solutions': typeof SolutionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -87,8 +111,11 @@ export interface FileRoutesById {
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/solutions/$slug': typeof SolutionsSlugRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -99,8 +126,11 @@ export interface FileRouteTypes {
     | '/industries'
     | '/insights'
     | '/our-approach'
+    | '/sitemap.xml'
     | '/technology-ecosystem'
     | '/who-we-are'
+    | '/solutions/$slug'
+    | '/solutions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -109,8 +139,11 @@ export interface FileRouteTypes {
     | '/industries'
     | '/insights'
     | '/our-approach'
+    | '/sitemap.xml'
     | '/technology-ecosystem'
     | '/who-we-are'
+    | '/solutions/$slug'
+    | '/solutions'
   id:
     | '__root__'
     | '/'
@@ -119,8 +152,11 @@ export interface FileRouteTypes {
     | '/industries'
     | '/insights'
     | '/our-approach'
+    | '/sitemap.xml'
     | '/technology-ecosystem'
     | '/who-we-are'
+    | '/solutions/$slug'
+    | '/solutions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -130,8 +166,11 @@ export interface RootRouteChildren {
   IndustriesRoute: typeof IndustriesRoute
   InsightsRoute: typeof InsightsRoute
   OurApproachRoute: typeof OurApproachRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TechnologyEcosystemRoute: typeof TechnologyEcosystemRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
+  SolutionsSlugRoute: typeof SolutionsSlugRoute
+  SolutionsIndexRoute: typeof SolutionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -178,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurApproachRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/technology-ecosystem': {
       id: '/technology-ecosystem'
       path: '/technology-ecosystem'
@@ -192,6 +238,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhoWeAreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions/': {
+      id: '/solutions/'
+      path: '/solutions'
+      fullPath: '/solutions/'
+      preLoaderRoute: typeof SolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/$slug': {
+      id: '/solutions/$slug'
+      path: '/solutions/$slug'
+      fullPath: '/solutions/$slug'
+      preLoaderRoute: typeof SolutionsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -202,8 +262,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesRoute: IndustriesRoute,
   InsightsRoute: InsightsRoute,
   OurApproachRoute: OurApproachRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TechnologyEcosystemRoute: TechnologyEcosystemRoute,
   WhoWeAreRoute: WhoWeAreRoute,
+  SolutionsSlugRoute: SolutionsSlugRoute,
+  SolutionsIndexRoute: SolutionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
