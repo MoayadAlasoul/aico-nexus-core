@@ -25,7 +25,7 @@ export function HomeHero() {
   const parallax = reduced ? 0 : Math.min(offset * 0.14, 90);
 
   return (
-    <section className="relative isolate flex min-h-[92svh] items-center overflow-hidden pb-24 pt-36 sm:pt-40">
+    <section className="relative isolate flex min-h-[82svh] items-center overflow-hidden pb-16 pt-28 sm:min-h-[92svh] sm:pb-24 sm:pt-40">
       {/* Background image layer */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <img
@@ -62,14 +62,14 @@ export function HomeHero() {
             <Eyebrow>{company.country} · Technology & Innovation</Eyebrow>
           </div>
 
-          <h1 className="mt-7 text-balance font-display text-[2.6rem] font-semibold leading-[1.03] sm:text-6xl lg:text-[4.6rem] animate-rise">
+          <h1 className="mt-5 text-balance font-display text-[2.05rem] font-semibold leading-[1.08] sm:mt-7 sm:text-6xl sm:leading-[1.03] lg:text-[4.6rem] animate-rise">
             Engineering intelligent,
             <br className="hidden sm:block" /> immersive and{" "}
             <span className="text-gradient">spatial systems</span>
           </h1>
 
           <p
-            className="mt-7 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-xl animate-rise"
+            className="mt-5 max-w-2xl text-pretty text-[0.95rem] leading-relaxed text-muted-foreground sm:mt-7 sm:text-xl animate-rise"
             style={{ animationDelay: "120ms" }}
           >
             AICO builds artificial intelligence, immersive technology and spatial computing
@@ -78,16 +78,16 @@ export function HomeHero() {
           </p>
 
           <div
-            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center animate-rise"
+            className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center animate-rise"
             style={{ animationDelay: "240ms" }}
           >
-            <Button asChild variant="hero" size="xl">
+            <Button asChild variant="hero" size="lg" className="w-full sm:h-14 sm:w-auto sm:px-9 sm:text-base">
               <Link to="/solutions">
                 Explore our solutions
                 <ArrowRight aria-hidden="true" />
               </Link>
             </Button>
-            <Button asChild variant="glass" size="xl">
+            <Button asChild variant="glass" size="lg" className="w-full sm:h-14 sm:w-auto sm:px-9 sm:text-base">
               <Link to="/immersive-content-studio">
                 <Play aria-hidden="true" />
                 Inside the studio
@@ -96,9 +96,10 @@ export function HomeHero() {
           </div>
 
           <dl
-            className="mt-16 grid max-w-3xl gap-x-8 gap-y-6 border-t border-border pt-8 sm:grid-cols-3 animate-fade-in"
+            className="mt-10 grid max-w-3xl gap-x-8 gap-y-5 border-t border-border pt-7 sm:mt-16 sm:gap-y-6 sm:pt-8 sm:grid-cols-3 animate-fade-in"
             style={{ animationDelay: "360ms" }}
           >
+
             {[
               { term: "Artificial Intelligence", detail: "Applied, governed, production-ready" },
               { term: "Immersive & Spatial", detail: "XR, digital twins, real-time systems" },

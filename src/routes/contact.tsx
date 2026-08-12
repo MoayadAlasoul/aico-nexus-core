@@ -35,7 +35,7 @@ function ContactPage() {
       />
 
       <Section>
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           <SectionHeader
             eyebrow="Details"
             title="How to reach us"

@@ -72,16 +72,16 @@ export function SectionHeader({
       {eyebrow ? <Eyebrow className={align === "center" ? "justify-center" : ""}>{eyebrow}</Eyebrow> : null}
       <Heading
         className={cn(
-          "mt-5 text-balance font-display font-semibold leading-[1.08]",
+          "mt-4 text-balance font-display font-semibold leading-[1.1] sm:mt-5 sm:leading-[1.08]",
           Heading === "h1"
-            ? "text-4xl sm:text-5xl lg:text-6xl"
-            : "text-3xl sm:text-4xl lg:text-[2.75rem]",
+            ? "text-[2rem] sm:text-5xl lg:text-6xl"
+            : "text-[1.65rem] sm:text-4xl lg:text-[2.75rem]",
         )}
       >
         {title}
       </Heading>
       {description ? (
-        <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p className="mt-4 text-pretty text-[0.95rem] leading-relaxed text-muted-foreground sm:mt-5 sm:text-lg">
           {description}
         </p>
       ) : null}
@@ -110,7 +110,7 @@ export function Section({
     <section
       id={id}
       aria-label={label}
-      className={cn("relative py-20 sm:py-24 lg:py-32", className)}
+      className={cn("relative py-14 sm:py-24 lg:py-32", className)}
     >
       {bare ? children : <Container size={containerSize}>{children}</Container>}
     </section>

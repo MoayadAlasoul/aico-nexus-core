@@ -15,7 +15,7 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <header className="relative overflow-hidden border-b border-border pb-16 pt-32 sm:pb-20 sm:pt-40">
+    <header className="relative overflow-hidden border-b border-border pb-12 pt-28 sm:pb-20 sm:pt-40">
       <span
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[image:var(--gradient-hero)]"
@@ -26,13 +26,13 @@ export function PageHero({
       />
       <Container className="relative">
         <Eyebrow>{eyebrow}</Eyebrow>
-        <h1 className="mt-6 max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
+        <h1 className="mt-5 max-w-4xl text-balance font-display text-[2rem] font-semibold leading-[1.1] sm:mt-6 sm:text-5xl sm:leading-[1.05] lg:text-6xl">
           {title}
         </h1>
-        <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p className="mt-5 max-w-2xl text-pretty text-[0.95rem] leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg">
           {description}
         </p>
-        {children ? <div className="mt-10">{children}</div> : null}
+        {children ? <div className="mt-8 sm:mt-10">{children}</div> : null}
       </Container>
     </header>
   );

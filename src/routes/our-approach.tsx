@@ -65,7 +65,7 @@ function ApproachPage() {
       </Section>
 
       <Section className="border-y border-border bg-surface/30">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
           <SectionHeader
             eyebrow="Delivery questions"
             title="How engagements usually run"
