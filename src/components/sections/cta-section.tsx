@@ -19,7 +19,7 @@ export function CtaSection({
   secondary?: { label: string; to: string };
 }) {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28">
+    <section className="relative overflow-hidden py-14 sm:py-28">
       <span
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[image:var(--gradient-hero)] opacity-90"
@@ -29,15 +29,15 @@ export function CtaSection({
         className="pointer-events-none absolute -top-1/2 left-1/2 size-[70rem] -translate-x-1/2 rounded-full bg-primary/20 blur-[140px]"
       />
       <Container className="relative">
-        <Reveal className="surface-panel rounded-2xl p-8 backdrop-blur-xl sm:p-12 lg:p-16">
+        <Reveal className="surface-panel rounded-2xl p-6 backdrop-blur-xl sm:p-12 lg:p-16">
           <Eyebrow>{eyebrow}</Eyebrow>
-          <h2 className="mt-5 max-w-3xl text-balance font-display text-3xl font-semibold leading-[1.1] sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 max-w-3xl text-balance font-display text-[1.65rem] font-semibold leading-[1.15] sm:mt-5 sm:text-4xl sm:leading-[1.1] lg:text-5xl">
             {title}
           </h2>
-          <p className="mt-5 max-w-2xl text-pretty leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mt-4 max-w-2xl text-pretty text-[0.95rem] leading-relaxed sm:mt-5 sm:text-base text-muted-foreground sm:text-lg">
             {description}
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
             <Button asChild variant="hero" size="lg">
               <Link to={primary.to}>
                 {primary.label}

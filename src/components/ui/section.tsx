@@ -110,7 +110,7 @@ export function Section({
     <section
       id={id}
       aria-label={label}
-      className={cn("relative py-20 sm:py-24 lg:py-32", className)}
+      className={cn("relative py-14 sm:py-24 lg:py-32", className)}
     >
       {bare ? children : <Container size={containerSize}>{children}</Container>}
     </section>
