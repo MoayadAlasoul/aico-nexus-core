@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { Section, SectionHeader, Reveal } from "@/components/ui/section";
 import { Panel } from "@/components/ui/primitives";
 import { ContactForm } from "@/components/forms/contact-form";
 import { company } from "@/data/company";
 
-const title = "Contact — AICO";
+const title = "Contact Us — AICO";
 const description =
-  "Contact Advanced Imagination ITS Company (AICO) to discuss artificial intelligence, immersive technology, spatial computing and immersive media programmes.";
+  "Contact Advanced Imagination ITS Company (AICO) in Jeddah, Kingdom of Saudi Arabia.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,8 +30,8 @@ function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Start a conversation with AICO"
-        description="Tell us about the programme, environment or dataset you are working with. We will route your enquiry to the right team."
+        title="Contact Us"
+        description="Advanced Imagination ITS Company (AICO)"
       />
 
       <Section>
@@ -55,17 +55,6 @@ function ContactPage() {
                     >
                       {company.contact.email}
                     </a>
-                  </span>
-                </Panel>
-              </li>
-              <li>
-                <Panel className="flex items-start gap-4 p-5">
-                  <Phone aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary-bright" />
-                  <span className="min-w-0">
-                    <span className="block text-xs uppercase tracking-[0.16em] text-muted-foreground">
-                      Phone
-                    </span>
-                    <span className="mt-1 block text-sm">{company.contact.phone}</span>
                   </span>
                 </Panel>
               </li>
