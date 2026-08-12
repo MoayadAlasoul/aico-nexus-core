@@ -81,7 +81,7 @@ export function HomeHero() {
             className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center animate-rise"
             style={{ animationDelay: "240ms" }}
           >
-            <Button asChild variant="hero" size="lg" className="w-full sm:size-auto sm:h-14 sm:px-9 sm:text-base">
+            <Button asChild variant="hero" size="lg" className="w-full sm:h-14 sm:w-auto sm:px-9 sm:text-base">
               <Link to="/solutions">
                 Explore our solutions
                 <ArrowRight aria-hidden="true" />
