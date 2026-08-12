@@ -87,7 +87,7 @@ export function HomeHero() {
                 <ArrowRight aria-hidden="true" />
               </Link>
             </Button>
-            <Button asChild variant="glass" size="lg" className="w-full sm:h-14 sm:px-9 sm:text-base">
+            <Button asChild variant="glass" size="lg" className="w-full sm:h-14 sm:w-auto sm:px-9 sm:text-base">
               <Link to="/immersive-content-studio">
                 <Play aria-hidden="true" />
                 Inside the studio
