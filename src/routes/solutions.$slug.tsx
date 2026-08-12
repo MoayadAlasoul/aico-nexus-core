@@ -59,7 +59,7 @@ function SolutionPage() {
       </PageHero>
 
       <Section>
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-start gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <Media
               src={solution.image}
@@ -98,7 +98,7 @@ function SolutionPage() {
       </Section>
 
       <Section>
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
           <SectionHeader eyebrow="Applications" title="Where it is applied" />
           <Reveal delay={80}>
             <ul className="flex flex-wrap gap-3">

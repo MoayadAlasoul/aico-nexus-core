@@ -13,7 +13,7 @@ import { projects, partners, insights } from "@/data/content";
 export function WhoWeAreSection() {
   return (
     <Section id="who-we-are">
-      <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="grid gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
         <SectionHeader
           eyebrow="Who we are"
           title="A technology company built for complex realities"
@@ -140,7 +140,7 @@ export function SolutionsSection() {
 export function IndustriesSection() {
   return (
     <Section className="border-y border-border bg-surface/30">
-      <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+      <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
         <SectionHeader
           eyebrow="Industries"
           title="Sectors where spatial intelligence changes outcomes"
@@ -223,7 +223,7 @@ export function TechnologyEcosystemSection() {
 export function StudioSection() {
   return (
     <Section className="border-y border-border bg-surface/30">
-      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <Media
             src="/images/studio/stage.jpg"
