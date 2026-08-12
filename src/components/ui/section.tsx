@@ -72,10 +72,10 @@ export function SectionHeader({
       {eyebrow ? <Eyebrow className={align === "center" ? "justify-center" : ""}>{eyebrow}</Eyebrow> : null}
       <Heading
         className={cn(
-          "mt-5 text-balance font-display font-semibold leading-[1.08]",
+          "mt-4 text-balance font-display font-semibold leading-[1.1] sm:mt-5 sm:leading-[1.08]",
           Heading === "h1"
-            ? "text-4xl sm:text-5xl lg:text-6xl"
-            : "text-3xl sm:text-4xl lg:text-[2.75rem]",
+            ? "text-[2rem] sm:text-5xl lg:text-6xl"
+            : "text-[1.65rem] sm:text-4xl lg:text-[2.75rem]",
         )}
       >
         {title}
