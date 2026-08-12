@@ -62,7 +62,7 @@ export function HomeHero() {
             <Eyebrow>{company.country} · Technology & Innovation</Eyebrow>
           </div>
 
-          <h1 className="mt-5 text-balance font-display text-[2.05rem] font-semibold leading-[1.08] sm:mt-7 sm:text-6xl sm:leading-[1.03] lg:text-[4.6rem]">
+          <h1 className="mt-5 text-balance font-display text-[2.05rem] font-semibold leading-[1.08] sm:mt-7 sm:text-6xl sm:leading-[1.03] lg:text-[4.6rem] animate-rise">
             Engineering intelligent,
             <br className="hidden sm:block" /> immersive and{" "}
             <span className="text-gradient">spatial systems</span>
