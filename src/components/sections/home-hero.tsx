@@ -25,7 +25,7 @@ export function HomeHero() {
   const parallax = reduced ? 0 : Math.min(offset * 0.14, 90);
 
   return (
-    <section className="relative isolate flex min-h-[92svh] items-center overflow-hidden pb-24 pt-36 sm:pt-40">
+    <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28 sm:min-h-[92svh] sm:pb-24 sm:pt-40">
       {/* Background image layer */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
         <img
