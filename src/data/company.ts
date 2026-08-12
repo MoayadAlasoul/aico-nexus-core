@@ -12,11 +12,9 @@ export const company = {
     "To engineer intelligent and immersive systems that help organisations understand complex realities and act on them with confidence.",
   vision:
     "A future where every organisation can experience its data, its assets and its ambitions in three dimensions.",
-  // TODO: replace with official contact details before launch.
   contact: {
-    email: "info@aico.example",
-    phone: "+966 00 000 0000",
-    addressLines: ["Advanced Imagination ITS Company", "Riyadh", "Kingdom of Saudi Arabia"],
+    email: "info@aico-tech.com",
+    addressLines: ["Advanced Imagination ITS Company (AICO)", "Jeddah", "Kingdom of Saudi Arabia"],
   },
   social: [
     { label: "LinkedIn", href: "#" },
