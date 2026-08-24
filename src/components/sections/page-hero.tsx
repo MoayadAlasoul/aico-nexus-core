@@ -8,18 +8,37 @@ export function PageHero({
   title,
   description,
   children,
+  image,
+  imageAlt = "",
 }: {
   eyebrow: string;
   title: string;
   description: string;
   children?: ReactNode;
+  image?: string;
+  imageAlt?: string;
 }) {
   return (
     <header className="relative overflow-hidden border-b border-border pb-12 pt-28 sm:pb-20 sm:pt-40">
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[image:var(--gradient-hero)]"
-      />
+      {image ? (
+        <>
+          <img
+            src={image}
+            alt={imageAlt}
+            className="pointer-events-none absolute inset-0 -z-20 size-full object-cover opacity-40"
+            width={1920}
+            height={1080}
+            loading="eager"
+          />
+          <span className="pointer-events-none absolute inset-0 -z-10 bg-[image:var(--gradient-hero)] opacity-90" />
+          <span className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-background to-transparent" />
+        </>
+      ) : (
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-[image:var(--gradient-hero)]"
+        />
+      )}
       <span
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 top-0 size-[45rem] rounded-full bg-accent/10 blur-[130px]"
@@ -37,3 +56,4 @@ export function PageHero({
     </header>
   );
 }
+
