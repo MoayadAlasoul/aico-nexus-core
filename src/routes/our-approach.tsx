@@ -37,6 +37,8 @@ function ApproachPage() {
         eyebrow="Our approach"
         title="Six phases from ambition to operating system"
         description="A structured delivery model that de-risks complex programmes without slowing down the creative work."
+        image="/images/our-approach/hero.jpg"
+        imageAlt="Advanced technology visualization of Saudi Arabia — AICO approach"
       />
 
       <Section>
