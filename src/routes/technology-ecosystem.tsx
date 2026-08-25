@@ -32,6 +32,8 @@ function EcosystemPage() {
         eyebrow="Technology ecosystem"
         title="One architecture across five layers"
         description="Experience, intelligence, spatial data, platform and governance are designed together so capability compounds instead of fragmenting."
+        image="/images/technology-ecosystem/hero.jpg"
+        imageAlt="AICO technology ecosystem — holographic city planning and spatial intelligence"
       />
 
       <Section>
