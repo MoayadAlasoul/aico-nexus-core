@@ -39,8 +39,8 @@ function ApproachPage() {
         description="A structured delivery model that de-risks complex programmes without slowing down the creative work."
         image="/images/our-approach/hero.jpg"
         imageAlt="Advanced technology visualization of Saudi Arabia — AICO approach"
-        imageOpacityClass="opacity-65"
-        overlayOpacityClass="opacity-[0.75]"
+        imageOpacityClass="opacity-80"
+        overlayOpacityClass="opacity-65"
       />
 
       <Section>
