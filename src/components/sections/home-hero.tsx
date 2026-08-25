@@ -33,10 +33,13 @@ export function HomeHero() {
           alt=""
           width={1920}
           height={1088}
-          className="size-full object-cover opacity-60"
-          style={{ transform: `translate3d(0, ${parallax * 0.5}px, 0) scale(1.06)` }}
+          className="size-full object-cover opacity-[0.78]"
+          style={{
+            transform: `translate3d(0, ${parallax * 0.5}px, 0) scale(1.06)`,
+            filter: "contrast(1.12) brightness(1.08) saturate(1.05)",
+          }}
         />
-        <span className="absolute inset-0 bg-[image:var(--gradient-hero)] opacity-90" />
+        <span className="absolute inset-0 bg-[image:var(--gradient-hero)] opacity-[0.78]" />
         <span className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-background to-transparent" />
         <span className="absolute -left-32 top-1/4 size-[42rem] animate-[drift_22s_ease-in-out_infinite] rounded-full bg-primary/25 blur-[150px]" />
         <span className="absolute -right-24 top-1/3 size-[32rem] rounded-full bg-accent/10 blur-[140px]" />
