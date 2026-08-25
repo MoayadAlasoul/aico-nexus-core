@@ -10,6 +10,8 @@ export function PageHero({
   children,
   image,
   imageAlt = "",
+  imageOpacityClass = "opacity-40",
+  overlayOpacityClass = "opacity-90",
 }: {
   eyebrow: string;
   title: string;
@@ -17,6 +19,8 @@ export function PageHero({
   children?: ReactNode;
   image?: string;
   imageAlt?: string;
+  imageOpacityClass?: string;
+  overlayOpacityClass?: string;
 }) {
   return (
     <header className="relative overflow-hidden border-b border-border pb-12 pt-28 sm:pb-20 sm:pt-40">
@@ -25,12 +29,12 @@ export function PageHero({
           <img
             src={image}
             alt={imageAlt}
-            className="pointer-events-none absolute inset-0 -z-20 size-full object-cover opacity-40"
+            className={`pointer-events-none absolute inset-0 -z-20 size-full object-cover ${imageOpacityClass}`}
             width={1920}
             height={1080}
             loading="eager"
           />
-          <span className="pointer-events-none absolute inset-0 -z-10 bg-[image:var(--gradient-hero)] opacity-90" />
+          <span className={`pointer-events-none absolute inset-0 -z-10 bg-[image:var(--gradient-hero)] ${overlayOpacityClass}`} />
           <span className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-background to-transparent" />
         </>
       ) : (
