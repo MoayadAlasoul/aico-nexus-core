@@ -84,7 +84,8 @@ export const solutions: Solution[] = [
       "Site planning and logistics simulation",
     ],
   },
-  {
+   /* 
+   {
     slug: "artificial-intelligence",
     shortTitle: "Artificial Intelligence",
     title: "Artificial Intelligence",
@@ -122,6 +123,7 @@ export const solutions: Solution[] = [
       "Decision support dashboards",
     ],
   },
+  */
   {
     slug: "digital-content-creation",
     shortTitle: "Digital Content Creation",
