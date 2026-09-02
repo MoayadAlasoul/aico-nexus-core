@@ -58,7 +58,7 @@ export const solutions: Solution[] = [
     tagline: "Digital content authored for immersive formats",
     summary:
       "Digital content production for immersive formats — 360° content, interactive media, animation and motion — developed with creative direction, storytelling and technical coordination.",
-    image: "/images/solutions/digital-content-creation.jpg",
+    image: "/__l5e/assets-v1/13fdec6e-881a-448e-8e0b-0f120f347f46/immersive-content.png",
     icon: "Clapperboard",
     capabilities: [
       "360° and immersive video content",
