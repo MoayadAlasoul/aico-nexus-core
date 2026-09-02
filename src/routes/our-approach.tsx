@@ -93,14 +93,6 @@ function ApproachPage() {
                   and a technology vendor.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="ai">
-                <AccordionTrigger>How is AI governed?</AccordionTrigger>
-                <AccordionContent>
-                  Every AI deliverable ships with an evaluation harness, monitoring, escalation
-                  paths and documented data handling. Human oversight is designed in, not added
-                  later.
-                </AccordionContent>
-              </AccordionItem>
               <AccordionItem value="handover">
                 <AccordionTrigger>What happens after launch?</AccordionTrigger>
                 <AccordionContent>

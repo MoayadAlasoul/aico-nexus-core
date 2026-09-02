@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ImmersiveContentStudioRouteImport } from './routes/immersive-content-studio'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as OurApproachRouteImport } from './routes/our-approach'
@@ -30,11 +29,6 @@ const IndexRoute = IndexRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ImmersiveContentStudioRoute = ImmersiveContentStudioRouteImport.update({
-  id: '/immersive-content-studio',
-  path: '/immersive-content-studio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndustriesRoute = IndustriesRouteImport.update({
@@ -86,7 +80,6 @@ const SolutionsSlugRoute = SolutionsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
-  '/immersive-content-studio': typeof ImmersiveContentStudioRoute
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
@@ -100,7 +93,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
-  '/immersive-content-studio': typeof ImmersiveContentStudioRoute
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
@@ -115,7 +107,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
-  '/immersive-content-studio': typeof ImmersiveContentStudioRoute
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
@@ -131,7 +122,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contact'
-    | '/immersive-content-studio'
     | '/industries'
     | '/insights'
     | '/our-approach'
@@ -145,7 +135,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contact'
-    | '/immersive-content-studio'
     | '/industries'
     | '/insights'
     | '/our-approach'
@@ -159,7 +148,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contact'
-    | '/immersive-content-studio'
     | '/industries'
     | '/insights'
     | '/our-approach'
@@ -174,7 +162,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
-  ImmersiveContentStudioRoute: typeof ImmersiveContentStudioRoute
   IndustriesRoute: typeof IndustriesRoute
   InsightsRoute: typeof InsightsRoute
   OurApproachRoute: typeof OurApproachRoute
@@ -200,13 +187,6 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/immersive-content-studio': {
-      id: '/immersive-content-studio'
-      path: '/immersive-content-studio'
-      fullPath: '/immersive-content-studio'
-      preLoaderRoute: typeof ImmersiveContentStudioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries': {
@@ -278,7 +258,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
-  ImmersiveContentStudioRoute: ImmersiveContentStudioRoute,
   IndustriesRoute: IndustriesRoute,
   InsightsRoute: InsightsRoute,
   OurApproachRoute: OurApproachRoute,

@@ -80,7 +80,7 @@ function InsightsPage() {
 
       <CtaSection
         title="Want to go deeper on a topic?"
-        description="Our teams run briefings and technical workshops for organisations evaluating immersive and AI programmes."
+        description="Our teams run briefings and technical workshops for organisations evaluating immersive experience programmes."
         secondary={{ label: "Who we are", to: "/who-we-are" }}
       />
     </>
