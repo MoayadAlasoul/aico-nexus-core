@@ -97,7 +97,7 @@ export const solutions: Solution[] = [
     tagline: "High-fidelity imagery for what does not exist yet",
     summary:
       "CGI, 3D visualization and animation that let stakeholders evaluate design intent, environments and concepts with confidence before they are built.",
-    image: "/images/solutions/cgi-3d-visualization.jpg",
+    image: "/__l5e/assets-v1/132b19be-82bb-4ddd-bc1f-dd269ea859fe/cgi-3d-visualization.png",
     icon: "Cuboid",
     capabilities: [
       "Architectural and masterplan visualization",
