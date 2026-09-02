@@ -221,47 +221,55 @@ export const technologyLayers: TechnologyLayer[] = [
 export const approachPhases: ApproachPhase[] = [
   {
     step: "01",
-    title: "Understand the objective",
+    title: "Discover",
     description:
-      "We start with the client's objective, audience, environment and the outcome that defines success.",
-    deliverables: ["Objective definition", "Audience and context review", "Success measures"],
+      "Understand the client's objectives, audience, environment, challenges, and desired outcome.",
+    deliverables: [],
   },
   {
     step: "02",
-    title: "Define the experience",
+    title: "Define",
     description:
-      "Concept, narrative and audience journey are designed before technology decisions are made.",
-    deliverables: ["Experience concept", "Narrative direction", "Journey and interaction design"],
+      "Identify the use case, scope, experience requirements, technology needs, and success criteria.",
+    deliverables: [],
   },
   {
     step: "03",
-    title: "Identify technologies & specialists",
+    title: "Design",
     description:
-      "We map the technologies, content, hardware, software and specialist capabilities the project requires.",
-    deliverables: ["Technology requirements", "Provider and specialist mapping", "Feasibility view"],
+      "Develop the user journey, creative concept, content direction, interaction model, and technical requirements.",
+    deliverables: [],
   },
   {
     step: "04",
-    title: "Produce",
+    title: "Create",
     description:
-      "Creative and technical work progresses in one coordinated plan, with review points at each milestone.",
-    deliverables: ["Content production", "Experience build", "Review and QA reporting"],
+      "Produce the required immersive content, CGI, 3D assets, interactive elements, and digital experiences.",
+    deliverables: [],
   },
   {
     step: "05",
-    title: "Integrate & deploy",
+    title: "Integrate",
     description:
-      "Devices, software and content are integrated, tested and commissioned in the real environment.",
-    deliverables: ["Integrated system", "Testing and commissioning", "Operational documentation"],
+      "Coordinate and integrate the relevant devices, software, content, infrastructure, and specialist technologies.",
+    deliverables: [],
   },
   {
     step: "06",
-    title: "Support & evolve",
+    title: "Deliver",
     description:
-      "Handover, training and structured reviews keep the experience running and allow it to develop.",
-    deliverables: ["Team training", "Performance review", "Enhancement plan"],
+      "Implement, test, optimize, and prepare the experience for launch or operational use.",
+    deliverables: [],
+  },
+  {
+    step: "07",
+    title: "Support",
+    description:
+      "Provide training, knowledge transfer, technical coordination, and support according to project requirements.",
+    deliverables: [],
   },
 ];
+
 
 /**
  * HIDDEN (Content V3): studio service content is retained for future use but is
