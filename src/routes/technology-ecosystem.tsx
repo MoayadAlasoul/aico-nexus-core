@@ -6,6 +6,8 @@ import { Panel } from "@/components/ui/primitives";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { technologyLayers, technologyEcosystem } from "@/data/company";
 
+const SHOW_ENABLING_TECHNOLOGIES = false;
+
 const title = "Technology Ecosystem — AICO Immersive Technology Partners";
 const description =
   "AICO works with specialized technology providers and solution partners, coordinating the devices, software, content, production and streaming technologies each immersive project requires.";
@@ -48,48 +50,50 @@ function EcosystemPage() {
         </SectionHeader>
       </Section>
 
-      <Section className="border-y border-border bg-surface/30">
-        <SectionHeader
-          eyebrow="Enabling technologies"
-          title="Explore the technologies we coordinate"
-          description="These technologies enable the experiences we deliver. Select a category to see the components we specify, configure and integrate with specialist providers."
-        />
-        <Reveal delay={80} className="mt-12">
-          <Tabs defaultValue={technologyLayers[0]!.name}>
-            <TabsList className="flex h-auto w-full flex-wrap justify-start gap-2 bg-transparent p-0">
+      {SHOW_ENABLING_TECHNOLOGIES && (
+        <Section className="border-y border-border bg-surface/30">
+          <SectionHeader
+            eyebrow="Enabling technologies"
+            title="Explore the technologies we coordinate"
+            description="These technologies enable the experiences we deliver. Select a category to see the components we specify, configure and integrate with specialist providers."
+          />
+          <Reveal delay={80} className="mt-12">
+            <Tabs defaultValue={technologyLayers[0]!.name}>
+              <TabsList className="flex h-auto w-full flex-wrap justify-start gap-2 bg-transparent p-0">
+                {technologyLayers.map((layer) => (
+                  <TabsTrigger
+                    key={layer.name}
+                    value={layer.name}
+                    className="rounded-full border border-border px-4 py-2 text-xs data-[state=active]:bg-primary data-[state=active]:text-primary-foreground sm:text-sm"
+                  >
+                    {layer.name}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
               {technologyLayers.map((layer) => (
-                <TabsTrigger
-                  key={layer.name}
-                  value={layer.name}
-                  className="rounded-full border border-border px-4 py-2 text-xs data-[state=active]:bg-primary data-[state=active]:text-primary-foreground sm:text-sm"
-                >
-                  {layer.name}
-                </TabsTrigger>
+                <TabsContent key={layer.name} value={layer.name} className="mt-8">
+                  <Panel className="p-7 sm:p-10">
+                    <h3 className="font-display text-2xl font-semibold">{layer.name}</h3>
+                    <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                      {layer.description}
+                    </p>
+                    <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                      {layer.components.map((c) => (
+                        <li
+                          key={c}
+                          className="rounded-lg border border-border bg-elevated/50 px-4 py-3 text-sm"
+                        >
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </Panel>
+                </TabsContent>
               ))}
-            </TabsList>
-            {technologyLayers.map((layer) => (
-              <TabsContent key={layer.name} value={layer.name} className="mt-8">
-                <Panel className="p-7 sm:p-10">
-                  <h3 className="font-display text-2xl font-semibold">{layer.name}</h3>
-                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                    {layer.description}
-                  </p>
-                  <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                    {layer.components.map((c) => (
-                      <li
-                        key={c}
-                        className="rounded-lg border border-border bg-elevated/50 px-4 py-3 text-sm"
-                      >
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                </Panel>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </Reveal>
-      </Section>
+            </Tabs>
+          </Reveal>
+        </Section>
+      )}
 
       <Section>
         <SectionHeader
