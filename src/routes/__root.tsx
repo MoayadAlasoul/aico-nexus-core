@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "AICO engineers artificial intelligence, immersive technology and spatial computing systems from Saudi Arabia.",
+          "AICO creates immersive experiences, digital content and interactive environments from Saudi Arabia.",
       },
       { name: "author", content: "Advanced Imagination ITS Company (AICO)" },
       { property: "og:site_name", content: "AICO" },
