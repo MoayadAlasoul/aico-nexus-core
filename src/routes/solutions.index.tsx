@@ -7,9 +7,9 @@ import { Panel, DataIcon } from "@/components/ui/primitives";
 import { Media } from "@/components/ui/media";
 import { solutions } from "@/data/solutions";
 
-const title = "Solutions — AICO";
+const title = "What We Deliver — AICO Immersive Experiences & Content";
 const description =
-  "Seven AICO practices: immersive technology, spatial computing, artificial intelligence, digital content creation, CGI and 3D visualization, immersive live streaming and immersive domes.";
+  "Eight AICO offerings: immersive experiences, immersive content, CGI and 3D visualization, virtual production, immersive live streaming, domes and digital environments, experience design and technical integration.";
 
 export const Route = createFileRoute("/solutions/")({
   head: () => ({
@@ -20,6 +20,7 @@ export const Route = createFileRoute("/solutions/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/solutions" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/solutions" }],
   }),
@@ -30,9 +31,9 @@ function SolutionsIndexPage() {
   return (
     <>
       <PageHero
-        eyebrow="Solutions"
-        title="Intelligent, immersive and spatial systems"
-        description="Seven connected practices delivered by one integrated engineering and creative team — combined around the outcome you need."
+        eyebrow="What we deliver"
+        title="Immersive experiences, content and digital environments"
+        description="Eight core offerings, combined per project around the client's objective, audience and environment."
       />
 
       <Section>
@@ -54,7 +55,7 @@ function SolutionsIndexPage() {
                   <div className="flex flex-1 flex-col p-6">
                     <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-muted-foreground">
                       <DataIcon name={s.icon} className="size-4 text-primary-bright" />
-                      Solution
+                      What we deliver
                     </span>
                     <h2 className="mt-4 font-display text-xl font-semibold transition-colors group-hover:text-primary-bright">
                       {s.shortTitle}
@@ -78,8 +79,8 @@ function SolutionsIndexPage() {
       </Section>
 
       <CtaSection
-        title="Most programmes combine several of these"
-        description="Tell us the outcome and we will propose the right combination of intelligence, immersion and visualisation."
+        title="Most projects combine several of these"
+        description="Tell us the objective and we will propose the right combination of experience design, content, technology and delivery."
         secondary={{ label: "Industries", to: "/industries" }}
       />
     </>
