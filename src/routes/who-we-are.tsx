@@ -4,7 +4,9 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { Section, SectionHeader, Reveal, Eyebrow } from "@/components/ui/section";
 import { Panel, FeatureCard } from "@/components/ui/primitives";
 import { Media } from "@/components/ui/media";
-import { company, whoWeAreParagraphs, values, capabilities } from "@/data/company";
+import { company, whoWeAreParagraphs, values, capabilities, whyAicoPoints } from "@/data/company";
+
+const SHOW_CAPABILITIES = false;
 
 const title = "Who We Are — AICO Immersive Technology Company in Jeddah";
 const description =
@@ -97,19 +99,37 @@ function WhoWeArePage() {
       </Section>
 
       <Section className="border-t border-border bg-surface/30">
-        <SectionHeader
-          eyebrow="Capabilities"
-          title="What our teams do"
-          description="Capabilities are combined per project rather than sold as fixed packages."
-        />
+        <SectionHeader eyebrow="Why AICO" title="Why organizations choose AICO" />
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {capabilities.map((c, i) => (
-            <Reveal as="li" key={c.title} delay={i * 60}>
-              <FeatureCard icon={c.icon} title={c.title} description={c.description} />
+          {whyAicoPoints.map((point, i) => (
+            <Reveal as="li" key={point.title} delay={i * 60}>
+              <Panel interactive className="h-full">
+                <h2 className="font-display text-lg font-semibold sm:text-xl">{point.title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {point.description}
+                </p>
+              </Panel>
             </Reveal>
           ))}
         </ul>
       </Section>
+
+      {SHOW_CAPABILITIES && (
+        <Section className="border-t border-border bg-surface/30">
+          <SectionHeader
+            eyebrow="Capabilities"
+            title="What our teams do"
+            description="Capabilities are combined per project rather than sold as fixed packages."
+          />
+          <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((c, i) => (
+              <Reveal as="li" key={c.title} delay={i * 60}>
+                <FeatureCard icon={c.icon} title={c.title} description={c.description} />
+              </Reveal>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       <CtaSection
         title="Start with your objective"
