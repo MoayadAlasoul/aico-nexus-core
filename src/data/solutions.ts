@@ -135,7 +135,7 @@ export const solutions: Solution[] = [
     tagline: "Real-time environments captured in camera",
     summary:
       "Virtual production workflows that combine real-time environments, LED volumes and camera tracking — coordinated with specialist production partners and facilities per project.",
-    image: "/images/studio/stage.jpg",
+    image: "/__l5e/assets-v1/8c018499-d0fe-4e50-9b15-87699ccc2a5b/virtual-production.png",
     icon: "Video",
     capabilities: [
       "Virtual production planning",
