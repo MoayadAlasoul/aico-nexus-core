@@ -7,6 +7,9 @@ import { Gallery } from "@/components/ui/gallery";
 import { solutions } from "@/data/solutions";
 import { projects } from "@/data/content";
 
+const SHOW_AREAS_OF_EXPERIENCE = false;
+const SHOW_CAPABILITY_SAMPLES = false;
+
 const title = "Our Experience — AICO Immersive Experience Capabilities";
 const description =
   "The experience AICO brings to immersive projects: experience design, immersive content, CGI and 3D visualization, virtual production, technology coordination and technical delivery.";
@@ -37,45 +40,66 @@ function OurExperiencePage() {
       />
 
       <Section>
-        <SectionHeader
-          eyebrow="Areas of experience"
-          title="Where our experience is concentrated"
-          description="Each project draws on a different combination of these areas, selected around the client's objective."
-        />
-        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {solutions.map((s, i) => (
-            <Reveal as="li" key={s.slug} delay={i * 60}>
-              <Panel interactive className="flex h-full flex-col">
-                <span className="inline-flex size-11 items-center justify-center rounded-lg border border-border bg-primary/20">
-                  <DataIcon name={s.icon} />
-                </span>
-                <h2 className="mt-5 font-display text-lg font-semibold">{s.shortTitle}</h2>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {s.tagline}
-                </p>
-                <ul className="mt-5 flex flex-wrap gap-2">
-                  {s.capabilities.slice(0, 3).map((c) => (
-                    <li key={c}>
-                      <Pill>{c}</Pill>
-                    </li>
-                  ))}
-                </ul>
-              </Panel>
-            </Reveal>
-          ))}
-        </ul>
-      </Section>
-
-      <Section className="border-y border-border bg-surface/30">
-        <SectionHeader
-          eyebrow="Capability samples"
-          title="Illustrative capability samples"
-          description="These samples illustrate the types of experiences and content we develop. They are not presented as completed client projects."
-        />
-        <div className="mt-14">
-          <Gallery items={projects} />
+        <div className="mx-auto max-w-3xl space-y-6 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p>
+            AICO brings together creativity, storytelling, immersive technology, digital content production, software expertise, and project coordination to develop engaging digital experiences.
+          </p>
+          <p>
+            Our experience includes the creation and development of interactive and 360° digital content, product and commercial visualization, and immersive concepts for different use cases.
+          </p>
+          <p>
+            We believe an immersive experience should have a clear purpose. Every project should begin with the audience and the desired outcome, not simply with the technology.
+          </p>
+          <p>
+            Our objective is to create experiences that are engaging, comfortable, memorable, and aligned with the client's business or communication goals.
+          </p>
         </div>
       </Section>
+
+      {SHOW_AREAS_OF_EXPERIENCE && (
+        <Section>
+          <SectionHeader
+            eyebrow="Areas of experience"
+            title="Where our experience is concentrated"
+            description="Each project draws on a different combination of these areas, selected around the client's objective."
+          />
+          <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {solutions.map((s, i) => (
+              <Reveal as="li" key={s.slug} delay={i * 60}>
+                <Panel interactive className="flex h-full flex-col">
+                  <span className="inline-flex size-11 items-center justify-center rounded-lg border border-border bg-primary/20">
+                    <DataIcon name={s.icon} />
+                  </span>
+                  <h2 className="mt-5 font-display text-lg font-semibold">{s.shortTitle}</h2>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {s.tagline}
+                  </p>
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {s.capabilities.slice(0, 3).map((c) => (
+                      <li key={c}>
+                        <Pill>{c}</Pill>
+                      </li>
+                    ))}
+                  </ul>
+                </Panel>
+              </Reveal>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      {SHOW_CAPABILITY_SAMPLES && (
+        <Section className="border-y border-border bg-surface/30">
+          <SectionHeader
+            eyebrow="Capability samples"
+            title="Illustrative capability samples"
+            description="These samples illustrate the types of experiences and content we develop. They are not presented as completed client projects."
+          />
+          <div className="mt-14">
+            <Gallery items={projects} />
+          </div>
+        </Section>
+      )}
 
       <CtaSection
         title="Tell us what you want your audience to experience"
