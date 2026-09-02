@@ -15,6 +15,7 @@ import { Route as ImmersiveContentStudioRouteImport } from './routes/immersive-c
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as OurApproachRouteImport } from './routes/our-approach'
+import { Route as OurExperienceRouteImport } from './routes/our-experience'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TechnologyEcosystemRouteImport } from './routes/technology-ecosystem'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
@@ -51,6 +52,11 @@ const OurApproachRoute = OurApproachRouteImport.update({
   path: '/our-approach',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OurExperienceRoute = OurExperienceRouteImport.update({
+  id: '/our-experience',
+  path: '/our-experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/our-experience': typeof OurExperienceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/our-experience': typeof OurExperienceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/industries': typeof IndustriesRoute
   '/insights': typeof InsightsRoute
   '/our-approach': typeof OurApproachRoute
+  '/our-experience': typeof OurExperienceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology-ecosystem': typeof TechnologyEcosystemRoute
   '/who-we-are': typeof WhoWeAreRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/insights'
     | '/our-approach'
+    | '/our-experience'
     | '/sitemap.xml'
     | '/technology-ecosystem'
     | '/who-we-are'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/insights'
     | '/our-approach'
+    | '/our-experience'
     | '/sitemap.xml'
     | '/technology-ecosystem'
     | '/who-we-are'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/insights'
     | '/our-approach'
+    | '/our-experience'
     | '/sitemap.xml'
     | '/technology-ecosystem'
     | '/who-we-are'
@@ -166,6 +178,7 @@ export interface RootRouteChildren {
   IndustriesRoute: typeof IndustriesRoute
   InsightsRoute: typeof InsightsRoute
   OurApproachRoute: typeof OurApproachRoute
+  OurExperienceRoute: typeof OurExperienceRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TechnologyEcosystemRoute: typeof TechnologyEcosystemRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
@@ -217,6 +230,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurApproachRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-experience': {
+      id: '/our-experience'
+      path: '/our-experience'
+      fullPath: '/our-experience'
+      preLoaderRoute: typeof OurExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -262,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesRoute: IndustriesRoute,
   InsightsRoute: InsightsRoute,
   OurApproachRoute: OurApproachRoute,
+  OurExperienceRoute: OurExperienceRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TechnologyEcosystemRoute: TechnologyEcosystemRoute,
   WhoWeAreRoute: WhoWeAreRoute,
