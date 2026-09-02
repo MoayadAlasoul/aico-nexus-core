@@ -30,17 +30,29 @@ function EcosystemPage() {
     <>
       <PageHero
         eyebrow="Technology ecosystem"
-        title="One architecture across five layers"
-        description="Experience, intelligence, spatial data, platform and governance are designed together so capability compounds instead of fragmenting."
+        title="An ecosystem of specialized technologies and partners"
+        description={technologyEcosystem.paragraphs[0]}
         image="/images/technology-ecosystem/hero.jpg"
-        imageAlt="AICO technology ecosystem — holographic city planning and spatial intelligence"
+        imageAlt="AICO technology ecosystem — immersive visualisation and digital environments"
       />
 
       <Section>
         <SectionHeader
-          eyebrow="Architecture"
-          title="Explore each layer"
-          description="Select a layer to see the components we design, integrate and operate."
+          eyebrow="Approach"
+          title="Not limited to a single technology or platform"
+          description={technologyEcosystem.paragraphs[1]}
+        >
+          <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {technologyEcosystem.paragraphs[2]}
+          </p>
+        </SectionHeader>
+      </Section>
+
+      <Section className="border-y border-border bg-surface/30">
+        <SectionHeader
+          eyebrow="Enabling technologies"
+          title="Explore the technologies we coordinate"
+          description="These technologies enable the experiences we deliver. Select a category to see the components we specify, configure and integrate with specialist providers."
         />
         <Reveal delay={80} className="mt-12">
           <Tabs defaultValue={technologyLayers[0]!.name}>
