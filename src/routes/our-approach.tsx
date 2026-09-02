@@ -13,7 +13,7 @@ import { approachPhases, principles } from "@/data/company";
 
 const title = "Our Approach — AICO";
 const description =
-  "AICO's delivery model: discover, architect, prototype, produce, deploy and evolve — an engineering-led approach to immersive and intelligent systems.";
+  "AICO's delivery approach: understand the objective, define the experience, identify technologies and specialists, produce, integrate and support.";
 
 export const Route = createFileRoute("/our-approach")({
   head: () => ({
@@ -35,8 +35,8 @@ function ApproachPage() {
     <>
       <PageHero
         eyebrow="Our approach"
-        title="Six phases from ambition to operating system"
-        description="A structured delivery model that de-risks complex programmes without slowing down the creative work."
+        title="Six phases from objective to delivered experience"
+        description="A structured delivery approach that starts with your objective and coordinates the technologies, content and specialists required."
         image="/images/our-approach/hero.jpg"
         imageAlt="Advanced technology visualization of Saudi Arabia — AICO approach"
         imageOpacityClass="opacity-100"
