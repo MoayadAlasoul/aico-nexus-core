@@ -134,6 +134,42 @@ export const capabilities: Capability[] = [
   },
 ];
 
+/** Approved "Why AICO" points (Content V3 Point #11). */
+export const whyAicoPoints: { title: string; description: string }[] = [
+  {
+    title: "Innovation-Driven",
+    description: "We actively explore emerging technologies and new creative approaches.",
+  },
+  {
+    title: "Customer-Focused",
+    description: "Technology selection begins with the client's objective and audience.",
+  },
+  {
+    title: "Flexible Technology Approach",
+    description: "We are not restricted to one device, platform, or technology environment.",
+  },
+  {
+    title: "Creative + Technical Thinking",
+    description: "We connect storytelling and experience design with practical technology delivery.",
+  },
+  {
+    title: "Access to Specialized Expertise",
+    description: "We can coordinate specialist technologies and global providers according to project requirements.",
+  },
+  {
+    title: "End-to-End Coordination",
+    description: "We can support the journey from concept and content through technical integration and delivery.",
+  },
+  {
+    title: "Future-Ready",
+    description: "Our approach evolves as immersive technology and digital experiences develop.",
+  },
+  {
+    title: "Long-Term Relationships",
+    description: "We aim to grow with our clients and support their evolving immersive technology requirements.",
+  },
+];
+
 /** Technology ecosystem positioning copy (Content V3). */
 export const technologyEcosystem = {
   paragraphs: [

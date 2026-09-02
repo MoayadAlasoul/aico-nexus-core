@@ -4,7 +4,9 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { Section, SectionHeader, Reveal, Eyebrow } from "@/components/ui/section";
 import { Panel, FeatureCard } from "@/components/ui/primitives";
 import { Media } from "@/components/ui/media";
-import { company, whoWeAreParagraphs, values, capabilities } from "@/data/company";
+import { company, whoWeAreParagraphs, values, capabilities, whyAicoPoints } from "@/data/company";
+
+const SHOW_CAPABILITIES = false;
 
 const title = "Who We Are — AICO Immersive Technology Company in Jeddah";
 const description =
