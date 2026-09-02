@@ -32,7 +32,7 @@ function WhoWeArePage() {
       <PageHero
         eyebrow="Who we are"
         title="An immersive technology and digital experience company"
-        description={whoWeAreParagraphs[0]}
+        description={whoWeAreParagraphs[0]!}
       />
 
       <Section>
@@ -40,13 +40,13 @@ function WhoWeArePage() {
           <SectionHeader
             eyebrow="About AICO"
             title="What we do"
-            description={whoWeAreParagraphs[1]}
+            description={whoWeAreParagraphs[1]!}
           >
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              {whoWeAreParagraphs[2]}
+              {whoWeAreParagraphs[2]!}
             </p>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              {whoWeAreParagraphs[3]}
+              {whoWeAreParagraphs[3]!}
             </p>
           </SectionHeader>
           <Reveal delay={100}>

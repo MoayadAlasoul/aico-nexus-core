@@ -183,7 +183,7 @@ export function TechnologyEcosystemSection() {
       <SectionHeader
         eyebrow="Technology ecosystem"
         title="Coordinated technologies, not a single platform"
-        description={technologyEcosystem.paragraphs[1]}
+        description={technologyEcosystem.paragraphs[1]!}
       />
       <ol className="mt-14 space-y-4">
         {technologyLayers.map((layer, i) => (

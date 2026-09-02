@@ -31,7 +31,7 @@ function EcosystemPage() {
       <PageHero
         eyebrow="Technology ecosystem"
         title="An ecosystem of specialized technologies and partners"
-        description={technologyEcosystem.paragraphs[0]}
+        description={technologyEcosystem.paragraphs[0]!}
         image="/images/technology-ecosystem/hero.jpg"
         imageAlt="AICO technology ecosystem — immersive visualisation and digital environments"
       />
@@ -40,7 +40,7 @@ function EcosystemPage() {
         <SectionHeader
           eyebrow="Approach"
           title="Not limited to a single technology or platform"
-          description={technologyEcosystem.paragraphs[1]}
+          description={technologyEcosystem.paragraphs[1]!}
         >
           <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             {technologyEcosystem.paragraphs[2]}
