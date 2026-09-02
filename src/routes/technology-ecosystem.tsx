@@ -4,11 +4,11 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { Section, SectionHeader, Reveal } from "@/components/ui/section";
 import { Panel, Pill } from "@/components/ui/primitives";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { technologyLayers } from "@/data/company";
+import { technologyLayers, technologyEcosystem } from "@/data/company";
 
-const title = "Technology Ecosystem — AICO";
+const title = "Technology Ecosystem — AICO Immersive Technology Partners";
 const description =
-  "AICO's layered technology ecosystem: experience, intelligence, spatial data, platform and governance layers designed to operate as one system.";
+  "AICO works with specialized technology providers and solution partners, coordinating the devices, software, content, production and streaming technologies each immersive project requires.";
 
 export const Route = createFileRoute("/technology-ecosystem")({
   head: () => ({
