@@ -288,7 +288,7 @@ export const solutions: Solution[] = [
     tagline: "Bringing devices, software and content together on site",
     summary:
       "Technical coordination and integration of the devices, software, content and specialist services an immersive project depends on — through setup, testing, commissioning and handover.",
-    image: "/images/technology-ecosystem/hero.jpg",
+    image: "/__l5e/assets-v1/edcfad57-5de1-4e26-acab-f17a3eed1158/technical-integration.png",
     icon: "Workflow",
     capabilities: [
       "Hardware and device coordination",
