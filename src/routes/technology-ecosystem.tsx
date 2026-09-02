@@ -2,13 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { Section, SectionHeader, Reveal } from "@/components/ui/section";
-import { Panel, Pill } from "@/components/ui/primitives";
+import { Panel } from "@/components/ui/primitives";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { technologyLayers } from "@/data/company";
+import { technologyLayers, technologyEcosystem } from "@/data/company";
 
-const title = "Technology Ecosystem — AICO";
+const title = "Technology Ecosystem — AICO Immersive Technology Partners";
 const description =
-  "AICO's layered technology ecosystem: experience, intelligence, spatial data, platform and governance layers designed to operate as one system.";
+  "AICO works with specialized technology providers and solution partners, coordinating the devices, software, content, production and streaming technologies each immersive project requires.";
 
 export const Route = createFileRoute("/technology-ecosystem")({
   head: () => ({
@@ -30,17 +30,29 @@ function EcosystemPage() {
     <>
       <PageHero
         eyebrow="Technology ecosystem"
-        title="One architecture across five layers"
-        description="Experience, intelligence, spatial data, platform and governance are designed together so capability compounds instead of fragmenting."
+        title="An ecosystem of specialized technologies and partners"
+        description={technologyEcosystem.paragraphs[0]}
         image="/images/technology-ecosystem/hero.jpg"
-        imageAlt="AICO technology ecosystem — holographic city planning and spatial intelligence"
+        imageAlt="AICO technology ecosystem — immersive visualisation and digital environments"
       />
 
       <Section>
         <SectionHeader
-          eyebrow="Architecture"
-          title="Explore each layer"
-          description="Select a layer to see the components we design, integrate and operate."
+          eyebrow="Approach"
+          title="Not limited to a single technology or platform"
+          description={technologyEcosystem.paragraphs[1]}
+        >
+          <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {technologyEcosystem.paragraphs[2]}
+          </p>
+        </SectionHeader>
+      </Section>
+
+      <Section className="border-y border-border bg-surface/30">
+        <SectionHeader
+          eyebrow="Enabling technologies"
+          title="Explore the technologies we coordinate"
+          description="These technologies enable the experiences we deliver. Select a category to see the components we specify, configure and integrate with specialist providers."
         />
         <Reveal delay={80} className="mt-12">
           <Tabs defaultValue={technologyLayers[0]!.name}>
@@ -79,39 +91,27 @@ function EcosystemPage() {
         </Reveal>
       </Section>
 
-      <Section className="border-y border-border bg-surface/30">
+      <Section>
         <SectionHeader
-          eyebrow="Full stack"
-          title="The ecosystem at a glance"
-          description="A reference model we adapt to each organisation's existing platforms and standards."
+          eyebrow="Partners"
+          title="Technology and solution partners"
+          description="We work with specialized technology providers and solution partners to support the requirements of immersive projects. Partner logos are displayed only where brand-use authorization is formally established."
         />
-        <ol className="mt-14 space-y-4">
-          {technologyLayers.map((layer, i) => (
-            <Reveal as="li" key={layer.name} delay={i * 60}>
-              <Panel interactive className="grid gap-6 lg:grid-cols-[auto_1fr_1.1fr] lg:items-start">
-                <span className="font-display text-sm text-muted-foreground">0{i + 1}</span>
-                <div>
-                  <h3 className="font-display text-lg font-semibold">{layer.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {layer.description}
-                  </p>
-                </div>
-                <ul className="flex flex-wrap gap-2 lg:justify-end">
-                  {layer.components.map((c) => (
-                    <li key={c}>
-                      <Pill>{c}</Pill>
-                    </li>
-                  ))}
-                </ul>
+        <ul className="mt-14 grid max-w-2xl gap-4 sm:grid-cols-2">
+          {technologyEcosystem.partners.map((p, i) => (
+            <Reveal as="li" key={p.name} delay={i * 60}>
+              <Panel interactive className="h-full">
+                <h3 className="font-display text-lg font-semibold">{p.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{p.category}</p>
               </Panel>
             </Reveal>
           ))}
-        </ol>
+        </ul>
       </Section>
 
       <CtaSection
-        title="Integrate with what you already run"
-        description="We design for the platforms, identity systems and security standards already in place at your organisation."
+        title="We coordinate the technologies your project needs"
+        description="Share the objective, environment and audience, and we will identify the devices, software, content and specialist providers required."
         secondary={{ label: "Our approach", to: "/our-approach" }}
       />
     </>

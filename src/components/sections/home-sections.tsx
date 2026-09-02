@@ -7,7 +7,7 @@ import { Media } from "@/components/ui/media";
 import { Gallery } from "@/components/ui/gallery";
 import { solutions } from "@/data/solutions";
 import { industries } from "@/data/industries";
-import { capabilities, technologyLayers, studioServices, company } from "@/data/company";
+import { capabilities, technologyLayers, technologyEcosystem, company } from "@/data/company";
 import { projects, partners, insights } from "@/data/content";
 
 export function WhoWeAreSection() {
@@ -16,13 +16,14 @@ export function WhoWeAreSection() {
       <div className="grid gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
         <SectionHeader
           eyebrow="Who we are"
-          title="A technology company built for complex realities"
+          title="A Saudi company specialising in immersive technology"
           description={company.descriptor}
         >
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Our teams combine software engineering, spatial design, artificial intelligence and
-            cinematic craft. That combination lets us take an idea from strategy through prototype
-            to a deployed system that operates reliably in the real world.
+            We help organizations explore and implement new ways to engage customers, enhance
+            experiences, communicate ideas, create content, and bring concepts to life —
+            combining creativity, technology, storytelling, content production, technical
+            coordination and project delivery.
           </p>
           <Button asChild variant="outline" size="lg" className="mt-8">
             <Link to="/who-we-are">
@@ -46,7 +47,7 @@ export function WhoWeAreSection() {
           <Panel>
             <Eyebrow>Based in</Eyebrow>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              {company.country}, delivering for clients across regional and global markets.
+              Jeddah, Kingdom of Saudi Arabia. Established {company.established}.
             </p>
           </Panel>
         </Reveal>
@@ -60,8 +61,8 @@ export function CapabilitiesSection() {
     <Section className="border-y border-border bg-surface/30">
       <SectionHeader
         eyebrow="Core capabilities"
-        title="Six disciplines, one engineering culture"
-        description="Every engagement draws on the same integrated capability set, assembled around the outcome you need."
+        title="Creativity, technology and delivery in one team"
+        description="Every project draws on the same capability set, assembled around the objective you need to achieve."
       />
       <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {capabilities.map((c, i) => (
@@ -79,15 +80,15 @@ export function SolutionsSection() {
     <Section id="solutions">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <SectionHeader
-          eyebrow="Solutions"
-          title="Seven connected practices"
-          description="From applied AI to architecture-scale immersive environments — designed to work together."
+          eyebrow="What we deliver"
+          title="Eight core offerings"
+          description="From immersive experiences and content to visualization, production and technical integration — combined per project."
           className="max-w-2xl"
         />
         <Reveal delay={100}>
           <Button asChild variant="outline">
             <Link to="/solutions">
-              All solutions
+              What we deliver
               <ArrowRight aria-hidden="true" />
             </Link>
           </Button>
@@ -112,7 +113,7 @@ export function SolutionsSection() {
                 <div className="flex flex-1 flex-col p-6">
                   <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-muted-foreground">
                     <DataIcon name={s.icon} className="size-4 text-primary-bright" />
-                    Solution
+                    What we deliver
                   </span>
                   <h3 className="mt-4 font-display text-xl font-semibold transition-colors group-hover:text-primary-bright">
                     {s.shortTitle}
@@ -143,8 +144,8 @@ export function IndustriesSection() {
       <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
         <SectionHeader
           eyebrow="Industries"
-          title="Sectors where spatial intelligence changes outcomes"
-          description="We work with organisations whose environments, assets and audiences are too complex for flat interfaces."
+          title="Sectors where immersive experiences change engagement"
+          description="We focus on sectors where audiences, destinations and stories benefit most from immersive experiences and digital content."
         >
           <Button asChild variant="outline" className="mt-8">
             <Link to="/industries">
@@ -181,8 +182,8 @@ export function TechnologyEcosystemSection() {
     <Section id="technology-ecosystem">
       <SectionHeader
         eyebrow="Technology ecosystem"
-        title="A layered architecture, not a collection of tools"
-        description="Experience, intelligence, spatial data, platform and governance layers are designed as one system."
+        title="Coordinated technologies, not a single platform"
+        description={technologyEcosystem.paragraphs[1]}
       />
       <ol className="mt-14 space-y-4">
         {technologyLayers.map((layer, i) => (
@@ -220,52 +221,25 @@ export function TechnologyEcosystemSection() {
   );
 }
 
-export function StudioSection() {
+export function SelectedWorkSection() {
   return (
-    <Section className="border-y border-border bg-surface/30">
-      <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
-        <Reveal>
-          <Media
-            src="/images/studio/stage.jpg"
-            alt="Virtual production stage with a large curved LED wall — abstract technology visual"
-            ratio="4/3"
-          />
-        </Reveal>
+    <Section id="work" className="border-y border-border bg-surface/30">
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <SectionHeader
-          eyebrow="Immersive Content Studio"
-          title="An in-house studio engineered for immersive formats"
-          description="Fulldome, virtual production, real-time interactive and spatial audio, produced under one roof with one pipeline."
-        >
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-            {studioServices.map((s) => (
-              <li key={s.title}>
-                <h3 className="font-display text-sm font-semibold">{s.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                  {s.description}
-                </p>
-              </li>
-            ))}
-          </ul>
-          <Button asChild variant="outline" size="lg" className="mt-9">
-            <Link to="/immersive-content-studio">
-              Visit the studio
+          eyebrow="Our experience"
+          title="Capability samples"
+          description="Illustrative examples of the experiences and content we develop. Client case studies will be published as approvals complete."
+          className="max-w-2xl"
+        />
+        <Reveal delay={100}>
+          <Button asChild variant="outline">
+            <Link to="/our-experience">
+              Our experience
               <ArrowRight aria-hidden="true" />
             </Link>
           </Button>
-        </SectionHeader>
+        </Reveal>
       </div>
-    </Section>
-  );
-}
-
-export function SelectedWorkSection() {
-  return (
-    <Section id="work">
-      <SectionHeader
-        eyebrow="Selected work"
-        title="Capability samples"
-        description="Illustrative examples of the systems we build. Client case studies will be published here as approvals complete."
-      />
       <div className="mt-14">
         <Gallery items={projects} />
       </div>
@@ -275,18 +249,18 @@ export function SelectedWorkSection() {
 
 export function PartnersSection() {
   return (
-    <Section className="border-y border-border bg-surface/30">
+    <Section>
       <SectionHeader
         align="center"
         eyebrow="Ecosystem"
-        title="Partner framework"
-        description="Reserved slots for technology, cloud, hardware and research relationships. Each will be populated as agreements are confirmed."
+        title="Technology and solution partners"
+        description="We work with specialized technology providers and solution partners to support the requirements of immersive projects."
       />
-      <ul className="mx-auto mt-14 grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+      <ul className="mx-auto mt-14 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
         {partners.map((p, i) => (
-          <Reveal as="li" key={p.id} delay={i * 50}>
+          <Reveal as="li" key={p.id} delay={i * 60}>
             <div className="surface-panel flex h-24 flex-col items-center justify-center gap-1.5 rounded-lg px-3 text-center">
-              <span className="font-display text-xs font-semibold">{p.name}</span>
+              <span className="font-display text-sm font-semibold">{p.name}</span>
               <span className="text-[0.65rem] uppercase tracking-[0.14em] text-muted-foreground">
                 {p.category}
               </span>
@@ -300,12 +274,12 @@ export function PartnersSection() {
 
 export function InsightsSection() {
   return (
-    <Section id="insights">
+    <Section id="insights" className="border-t border-border bg-surface/30">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <SectionHeader
           eyebrow="Insights"
           title="Perspectives from our teams"
-          description="Engineering notes, craft essays and points of view on intelligent and immersive systems."
+          description="Notes and points of view on immersive experiences, digital content and experience design."
           className="max-w-2xl"
         />
         <Reveal delay={80}>

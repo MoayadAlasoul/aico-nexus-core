@@ -6,9 +6,9 @@ import { Panel, Pill } from "@/components/ui/primitives";
 import { Media } from "@/components/ui/media";
 import { insights } from "@/data/content";
 
-const title = "Insights — AICO";
+const title = "Insights — AICO on Immersive Experiences & Content";
 const description =
-  "Engineering notes, craft essays and perspectives from AICO on artificial intelligence, immersive technology and spatial computing.";
+  "Notes and perspectives from AICO on immersive experiences, digital content, experience design and the technologies that enable them.";
 
 export const Route = createFileRoute("/insights")({
   head: () => ({
