@@ -5,9 +5,9 @@ import { Section, Reveal, SectionHeader } from "@/components/ui/section";
 import { Panel, Pill, DataIcon } from "@/components/ui/primitives";
 import { industries } from "@/data/industries";
 
-const title = "Industries — AICO";
+const title = "Industries — AICO Immersive Experiences by Sector";
 const description =
-  "AICO delivers AI, immersive and spatial computing programmes across government, energy, real estate, culture, education, finance, healthcare and retail.";
+  "AICO delivers immersive experiences and digital content across aviation, tourism and hospitality, entertainment and experiences, and destination development.";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
@@ -29,15 +29,15 @@ function IndustriesPage() {
     <>
       <PageHero
         eyebrow="Industries"
-        title="Sectors where spatial intelligence changes outcomes"
-        description="We work where environments, assets and audiences are too complex for flat interfaces — and where accuracy matters as much as impact."
+        title="Sectors where immersive experiences create engagement"
+        description="We focus on sectors where audiences, destinations and stories benefit most from immersive experiences, digital content and interactive environments."
       />
 
       <Section>
         <SectionHeader
           eyebrow="Sector focus"
           title="Where we operate"
-          description="Each sector engagement is shaped by its own regulatory, operational and audience requirements."
+          description="Each sector engagement is shaped by its own audience, environment and operational requirements."
         />
         <ul className="mt-14 grid gap-6 md:grid-cols-2">
           {industries.map((ind, i) => (

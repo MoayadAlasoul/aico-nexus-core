@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaSection } from "@/components/sections/cta-section";
 import { Section, SectionHeader, Reveal } from "@/components/ui/section";
-import { Panel, Pill } from "@/components/ui/primitives";
+import { Panel } from "@/components/ui/primitives";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { technologyLayers, technologyEcosystem } from "@/data/company";
 
