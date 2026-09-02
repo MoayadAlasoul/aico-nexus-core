@@ -64,9 +64,10 @@ function HomePage() {
       <PartnersSection />
       <InsightsSection />
       <CtaSection
-        title="Let's design the experience your audience will remember"
-        description="Tell us about the objective, audience or story you need to bring to life. We will identify and coordinate the technologies, content and specialist capabilities required."
-        secondary={{ label: "Explore what we deliver", to: "/solutions" }}
+        title="Have an idea for an immersive experience?"
+        description="Talk to AICO about your objective, audience, and environment. We can help you explore the right creative and technology approach and turn the concept into a practical project."
+        primary={{ label: "Start a Conversation", to: "/contact" }}
+        secondary={{ label: "Discuss Your Project", to: "/contact" }}
       />
     </>
   );
