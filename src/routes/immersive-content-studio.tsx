@@ -32,8 +32,8 @@ function StudioPage() {
     <>
       <PageHero
         eyebrow="Immersive Content Studio"
-        title="A studio engineered for immersive formats"
-        description="Content for domes, volumes, venues and broadcast is authored differently. Our studio is built around those formats rather than adapted to them."
+        title="Content production for immersive formats"
+        description="Content for domes, volumes, venues and live formats is authored differently. We coordinate the creative direction, production capabilities and specialist facilities each format requires."
       />
 
       <Section>
@@ -49,9 +49,9 @@ function StudioPage() {
 
       <Section className="border-y border-border bg-surface/30">
         <SectionHeader
-          eyebrow="Studio services"
-          title="Capabilities under one roof"
-          description="Direction, production, engineering and finishing share a single pipeline, which keeps quality consistent and schedules honest."
+          eyebrow="Content services"
+          title="Production capabilities we coordinate"
+          description="Direction, production, technical coordination and finishing are planned as one workflow with the specialists each project requires."
         />
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {studioServices.map((s, i) => (
@@ -79,9 +79,9 @@ function StudioPage() {
       </Section>
 
       <CtaSection
-        title="Bring a format we haven't built yet"
-        description="Dome, volume, projection-mapped facade or something entirely new — we prototype before we promise."
-        secondary={{ label: "Studio solutions", to: "/solutions" }}
+        title="Tell us the format you need content for"
+        description="Dome, volume, projection-mapped surface or interactive environment — we define the approach before we commit."
+        secondary={{ label: "What we deliver", to: "/solutions" }}
       />
     </>
   );
