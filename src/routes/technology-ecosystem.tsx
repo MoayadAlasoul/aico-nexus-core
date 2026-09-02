@@ -91,39 +91,27 @@ function EcosystemPage() {
         </Reveal>
       </Section>
 
-      <Section className="border-y border-border bg-surface/30">
+      <Section>
         <SectionHeader
-          eyebrow="Full stack"
-          title="The ecosystem at a glance"
-          description="A reference model we adapt to each organisation's existing platforms and standards."
+          eyebrow="Partners"
+          title="Technology and solution partners"
+          description="We work with specialized technology providers and solution partners to support the requirements of immersive projects. Partner logos are displayed only where brand-use authorization is formally established."
         />
-        <ol className="mt-14 space-y-4">
-          {technologyLayers.map((layer, i) => (
-            <Reveal as="li" key={layer.name} delay={i * 60}>
-              <Panel interactive className="grid gap-6 lg:grid-cols-[auto_1fr_1.1fr] lg:items-start">
-                <span className="font-display text-sm text-muted-foreground">0{i + 1}</span>
-                <div>
-                  <h3 className="font-display text-lg font-semibold">{layer.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {layer.description}
-                  </p>
-                </div>
-                <ul className="flex flex-wrap gap-2 lg:justify-end">
-                  {layer.components.map((c) => (
-                    <li key={c}>
-                      <Pill>{c}</Pill>
-                    </li>
-                  ))}
-                </ul>
+        <ul className="mt-14 grid max-w-2xl gap-4 sm:grid-cols-2">
+          {technologyEcosystem.partners.map((p, i) => (
+            <Reveal as="li" key={p.name} delay={i * 60}>
+              <Panel interactive className="h-full">
+                <h3 className="font-display text-lg font-semibold">{p.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{p.category}</p>
               </Panel>
             </Reveal>
           ))}
-        </ol>
+        </ul>
       </Section>
 
       <CtaSection
-        title="Integrate with what you already run"
-        description="We design for the platforms, identity systems and security standards already in place at your organisation."
+        title="We coordinate the technologies your project needs"
+        description="Share the objective, environment and audience, and we will identify the devices, software, content and specialist providers required."
         secondary={{ label: "Our approach", to: "/our-approach" }}
       />
     </>
