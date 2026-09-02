@@ -174,7 +174,7 @@ export const solutions: Solution[] = [
     tagline: "Live capability for immersive and connected audiences",
     summary:
       "Live streaming capability for immersive formats — multi-camera and 360° capture, real-time graphics and distribution — coordinated with specialist production and streaming providers.",
-    image: "/images/solutions/immersive-live-streaming.jpg",
+    image: "/__l5e/assets-v1/9c71bd81-87d5-4272-b5bf-1dddd4e1f5b3/immersive-live-streaming.png",
     icon: "Radio",
     capabilities: [
       "Multi-camera and 360° capture",
