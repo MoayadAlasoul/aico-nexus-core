@@ -95,7 +95,7 @@ function SolutionsIndexPage() {
                 <Panel interactive className="flex h-full flex-col p-0">
                   <Media
                     src={s.image}
-                    alt={`${s.title} — abstract technology visual`}
+                    alt={`${approvedCardContent[s.slug]?.title ?? s.title} — abstract technology visual`}
                     className="rounded-none border-0 border-b border-border"
                     imgClassName="group-hover:scale-[1.05]"
                   />
@@ -105,10 +105,10 @@ function SolutionsIndexPage() {
                       What we deliver
                     </span>
                     <h2 className="mt-4 font-display text-xl font-semibold transition-colors group-hover:text-primary-bright">
-                      {s.shortTitle}
+                      {approvedCardContent[s.slug]?.title ?? s.shortTitle}
                     </h2>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                      {s.summary}
+                      {approvedCardContent[s.slug]?.description ?? s.summary}
                     </p>
                     <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium">
                       Explore
