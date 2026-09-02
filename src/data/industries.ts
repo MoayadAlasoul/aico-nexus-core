@@ -5,7 +5,7 @@ export const industries: Industry[] = [
     slug: "aviation",
     name: "Aviation",
     summary:
-      "Immersive visualisation, digital content and experience environments for aviation destinations, facilities and passenger experiences.",
+      "Immersive customer experiences, training, destination discovery, visualization, and digital engagement.",
     focusAreas: [
       "Aviation experiences",
       "Destination visualisation",
@@ -18,7 +18,7 @@ export const industries: Industry[] = [
     slug: "tourism-hospitality",
     name: "Tourism & Hospitality",
     summary:
-      "Immersive experiences and visual content that bring destinations, hospitality environments and visitor journeys to life.",
+      "Destination storytelling, virtual exploration, interactive guest experiences, and immersive content that inspires travel and discovery.",
     focusAreas: [
       "Destination experiences",
       "Hospitality environments",
@@ -31,7 +31,7 @@ export const industries: Industry[] = [
     slug: "entertainment-experiences",
     name: "Entertainment & Experiences",
     summary:
-      "Immersive content and experiential environments designed to engage audiences and create memorable entertainment experiences.",
+      "Immersive storytelling, interactive environments, live experiences, digital entertainment, and dome experiences.",
     focusAreas: [
       "Immersive entertainment",
       "Experiential environments",
@@ -44,7 +44,7 @@ export const industries: Industry[] = [
     slug: "destination-development",
     name: "Destination Development",
     summary:
-      "Visualisation and immersive content that communicate the vision, identity and experience of emerging destinations and developments.",
+      "Immersive visualization, storytelling, digital experiences, and interactive content that help communicate destinations and future visitor experiences.",
     focusAreas: [
       "Destination visualisation",
       "Masterplan experiences",
