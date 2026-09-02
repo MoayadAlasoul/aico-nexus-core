@@ -1,180 +1,108 @@
 import type { Solution } from "@/types";
 
 /**
- * Solution catalogue. Editable content source for /solutions/* routes,
+ * "What We Deliver" catalogue (Content V3).
+ * Eight approved offerings. Editable content source for /solutions/* routes,
  * home page sections and the header mega-menu.
+ *
+ * NOTE: Artificial Intelligence is intentionally NOT a standalone offering.
+ * Legacy AI / Spatial Computing entries are retained (commented out) in git
+ * history and can be restored if positioning changes.
  */
 export const solutions: Solution[] = [
   {
-    slug: "immersive-technology",
-    shortTitle: "Immersive Technology",
-    title: "Immersive Technology",
-    tagline: "Extended reality systems engineered for enterprise scale",
+    slug: "immersive-experiences",
+    shortTitle: "Immersive Experiences",
+    title: "Immersive Experiences",
+    tagline: "Experiences that let audiences step inside an idea",
     summary:
-      "We design and deploy virtual, augmented and mixed reality environments that turn complex information into experiences people understand instantly — from operational training to experiential brand spaces.",
+      "We create immersive experiences using virtual, augmented, mixed and extended reality, spatial computing and interactive environments — coordinating the technologies, content and specialist capabilities each project requires.",
     image: "/images/solutions/immersive-technology.jpg",
     icon: "Boxes",
     capabilities: [
-      "Virtual and augmented reality applications",
+      "VR, AR, MR and XR experiences",
       "Interactive experience design",
-      "Real-time engine development",
-      "Multi-user immersive environments",
-      "Hardware integration and deployment",
-      "Experience analytics instrumentation",
+      "Spatial computing experiences",
+      "Multi-user and guided experiences",
+      "Device selection and coordination",
+      "On-site setup and operational support",
     ],
     outcomes: [
       {
-        title: "Faster comprehension",
+        title: "Deeper engagement",
         description:
-          "Spatial storytelling compresses complex technical narratives into a single guided experience.",
+          "Audiences participate in a story or environment instead of watching it from the outside.",
       },
       {
-        title: "Repeatable delivery",
+        title: "Clearer communication",
         description:
-          "Modular experience frameworks let programmes scale across venues, languages and devices.",
+          "Complex ideas, places and concepts become easier to understand when they can be experienced.",
       },
       {
-        title: "Measurable engagement",
+        title: "Fit-for-purpose delivery",
         description:
-          "Instrumented experiences produce behavioural data that informs the next iteration.",
+          "Technologies are selected around the objective, audience and environment of each project.",
       },
     ],
     useCases: [
-      "Executive briefing centres",
-      "Operational and safety training",
-      "Product configurators",
+      "Visitor and destination experiences",
       "Exhibition and pavilion experiences",
+      "Training and learning experiences",
+      "Brand and product experiences",
     ],
   },
   {
-    slug: "spatial-computing",
-    shortTitle: "Spatial Computing",
-    title: "Spatial Computing",
-    tagline: "Digital intelligence anchored to physical space",
+    slug: "immersive-content",
+    shortTitle: "Immersive Content",
+    title: "Immersive Content",
+    tagline: "Digital content authored for immersive formats",
     summary:
-      "Spatial platforms that connect environments, sensors and data into a single interactive layer — enabling teams to visualise, simulate and operate physical assets in real time.",
-    image: "/images/solutions/spatial-computing.jpg",
-    icon: "Scan",
-    capabilities: [
-      "Digital twin architecture",
-      "3D scanning, photogrammetry and reality capture",
-      "Spatial data pipelines",
-      "Real-time simulation environments",
-      "Location-aware interfaces",
-      "Headset and large-format deployment",
-    ],
-    outcomes: [
-      {
-        title: "Operational clarity",
-        description: "One spatial model becomes the shared reference for planning and operations.",
-      },
-      {
-        title: "Reduced risk",
-        description: "Scenarios are simulated digitally before committing physical resources.",
-      },
-      {
-        title: "Connected data",
-        description: "Live systems feed the spatial layer so decisions reflect current conditions.",
-      },
-    ],
-    useCases: [
-      "Facility and infrastructure twins",
-      "Urban and masterplan visualisation",
-      "Command and control environments",
-      "Site planning and logistics simulation",
-    ],
-  },
-   /* 
-   {
-    slug: "artificial-intelligence",
-    shortTitle: "Artificial Intelligence",
-    title: "Artificial Intelligence",
-    tagline: "Applied intelligence with enterprise-grade governance",
-    summary:
-      "We build AI systems that fit real operating environments: grounded assistants, computer vision pipelines, generative production tooling and decision support — designed with security and governance from day one.",
-    image: "/images/solutions/artificial-intelligence.jpg",
-    icon: "BrainCircuit",
-    capabilities: [
-      "AI strategy and opportunity mapping",
-      "Retrieval-grounded assistants and agents",
-      "Computer vision and video intelligence",
-      "Generative content pipelines",
-      "Model integration and orchestration",
-      "Evaluation, governance and monitoring",
-    ],
-    outcomes: [
-      {
-        title: "Grounded answers",
-        description: "Systems are anchored to approved knowledge sources with traceable citations.",
-      },
-      {
-        title: "Production readiness",
-        description: "Evaluation harnesses and monitoring accompany every deployed model.",
-      },
-      {
-        title: "Human oversight",
-        description: "Escalation and review paths keep accountability with your teams.",
-      },
-    ],
-    useCases: [
-      "Knowledge assistants",
-      "Automated content production",
-      "Visual inspection and monitoring",
-      "Decision support dashboards",
-    ],
-  },
-  */
-  {
-    slug: "digital-content-creation",
-    shortTitle: "Digital Content Creation",
-    title: "Digital Content Creation",
-    tagline: "Creative technology for brands operating at scale",
-    summary:
-      "An integrated content capability spanning creative direction, motion design, real-time graphics and campaign production — built to sustain high-volume output without diluting craft.",
+      "Digital content production for immersive formats — 360° content, interactive media, animation and motion — developed with creative direction, storytelling and technical coordination.",
     image: "/images/solutions/digital-content-creation.jpg",
     icon: "Clapperboard",
     capabilities: [
-      "Creative direction and art direction",
-      "Motion design and animation",
-      "Real-time and procedural graphics",
-      "Brand systems for digital environments",
-      "Localisation-ready content architecture",
-      "Content operations and asset management",
+      "360° and immersive video content",
+      "Interactive digital content",
+      "Animation and motion content",
+      "Creative direction and storytelling",
+      "Content adaptation across formats",
+      "Content review and delivery workflows",
     ],
     outcomes: [
       {
-        title: "Consistent identity",
-        description: "A single design system governs every screen, surface and format.",
+        title: "Format-appropriate content",
+        description:
+          "Content is authored for the surface it will play on rather than adapted after the fact.",
       },
       {
-        title: "Higher throughput",
-        description: "Template and pipeline engineering multiplies creative capacity.",
+        title: "Consistent storytelling",
+        description: "A single narrative direction carries across every screen and environment.",
       },
       {
-        title: "Channel fit",
-        description: "Assets are produced once and adapted for every destination.",
+        title: "Reusable material",
+        description: "Assets are structured so they can be reused across channels and languages.",
       },
     ],
     useCases: [
-      "Campaign and launch content",
-      "Corporate and investor storytelling",
-      "Event and venue graphics",
-      "Product marketing libraries",
+      "Destination and experience storytelling",
+      "Corporate and institutional content",
+      "Event and venue content",
+      "Educational and learning content",
     ],
   },
   {
     slug: "cgi-3d-visualization",
     shortTitle: "CGI & 3D Visualization",
     title: "CGI & 3D Visualization",
-    tagline: "Photoreal imagery for what does not exist yet",
+    tagline: "High-fidelity imagery for what does not exist yet",
     summary:
-      "High-fidelity CGI, architectural visualisation and product rendering that let stakeholders evaluate design intent with confidence long before construction or manufacture.",
+      "CGI, 3D visualization and animation that let stakeholders evaluate design intent, environments and concepts with confidence before they are built.",
     image: "/images/solutions/cgi-3d-visualization.jpg",
     icon: "Cuboid",
     capabilities: [
-      "Architectural and masterplan visualisation",
-      "Product and industrial rendering",
-      "Photoreal environments and lighting",
+      "Architectural and masterplan visualization",
+      "Product and environment rendering",
+      "Photoreal lighting and materials",
       "Technical and process animation",
       "Real-time asset optimisation",
       "Look development and shading",
@@ -182,7 +110,7 @@ export const solutions: Solution[] = [
     outcomes: [
       {
         title: "Confident approvals",
-        description: "Photoreal imagery aligns stakeholders around a single design intent.",
+        description: "High-fidelity imagery aligns stakeholders around a single design intent.",
       },
       {
         title: "Reusable assets",
@@ -195,85 +123,200 @@ export const solutions: Solution[] = [
     ],
     useCases: [
       "Development and masterplan imagery",
-      "Product launch visuals",
-      "Manufacturing and process films",
-      "Interior and experience previsualisation",
+      "Concept and design communication",
+      "Product and environment visuals",
+      "Experience previsualisation",
+    ],
+  },
+  {
+    slug: "virtual-production",
+    shortTitle: "Virtual Production",
+    title: "Virtual Production",
+    tagline: "Real-time environments captured in camera",
+    summary:
+      "Virtual production workflows that combine real-time environments, LED volumes and camera tracking — coordinated with specialist production partners and facilities per project.",
+    image: "/images/studio/stage.jpg",
+    icon: "Video",
+    capabilities: [
+      "Virtual production planning",
+      "Real-time environment creation",
+      "LED volume and stage coordination",
+      "Camera tracking and in-camera VFX",
+      "Previsualisation and technical rehearsal",
+      "Post and finishing coordination",
+    ],
+    outcomes: [
+      {
+        title: "Creative control on set",
+        description: "Decisions that normally wait for post are made live, in camera.",
+      },
+      {
+        title: "Efficient production",
+        description: "Environments are reused across shots, scenes and future productions.",
+      },
+      {
+        title: "Coordinated delivery",
+        description:
+          "Facilities, technology and specialists are brought together around the production plan.",
+      },
+    ],
+    useCases: [
+      "Brand and campaign production",
+      "Destination and concept films",
+      "Narrative and episodic content",
+      "Virtual environments for events",
     ],
   },
   {
     slug: "immersive-live-streaming",
     shortTitle: "Immersive Live Streaming",
     title: "Immersive Live Streaming",
-    tagline: "Broadcast-grade live production for connected audiences",
+    tagline: "Live capability for immersive and connected audiences",
     summary:
-      "Live production engineered for immersive formats — multi-camera capture, real-time graphics, virtual production and reliable distribution to on-site and remote audiences simultaneously.",
+      "Live streaming capability for immersive formats — multi-camera and 360° capture, real-time graphics and distribution — coordinated with specialist production and streaming providers.",
     image: "/images/solutions/immersive-live-streaming.jpg",
     icon: "Radio",
     capabilities: [
       "Multi-camera and 360° capture",
-      "Real-time graphics and AR overlays",
-      "Virtual production and LED volumes",
-      "Low-latency distribution architecture",
+      "Real-time graphics and overlays",
+      "Streaming and distribution coordination",
       "Multi-language and multi-feed delivery",
-      "Redundant on-site technical operations",
+      "On-site technical coordination",
+      "Rehearsal and contingency planning",
     ],
     outcomes: [
       {
-        title: "Reach without compromise",
-        description: "Remote audiences receive a production designed for them, not a side feed.",
+        title: "Reach beyond the room",
+        description: "Remote audiences receive a production designed for them.",
       },
       {
-        title: "Operational reliability",
-        description: "Redundant signal paths and rehearsed runbooks protect live moments.",
+        title: "Planned reliability",
+        description: "Signal paths, rehearsals and contingencies are planned before the live moment.",
       },
       {
-        title: "Reusable content",
-        description: "Every live production yields an archive ready for post-event campaigns.",
+        title: "Content afterlife",
+        description: "Live material can be repurposed for post-event communication.",
       },
     ],
     useCases: [
-      "Corporate and government events",
-      "Product launches and keynotes",
-      "Sports and entertainment coverage",
-      "Hybrid conferences",
+      "Conferences and corporate events",
+      "Launches and keynotes",
+      "Hybrid audience programmes",
+      "Cultural and entertainment events",
     ],
   },
   {
     slug: "immersive-domes-digital-environments",
     shortTitle: "Domes & Digital Environments",
     title: "Immersive Domes & Digital Environments",
-    tagline: "Architecture-scale canvases with engineered content",
+    tagline: "Architecture-scale canvases with content built for the space",
     summary:
-      "End-to-end design of domes, projection environments and large-format digital venues — combining spatial design, display engineering and bespoke content built for the geometry of the space.",
+      "Design and coordination of domes, projection environments and large-format digital spaces — combining experience design, display technology coordination and content authored for the geometry of the space.",
     image: "/images/solutions/immersive-domes-digital-environments.jpg",
     icon: "Aperture",
     capabilities: [
       "Dome and venue experience design",
-      "Projection and LED system engineering",
-      "Fulldome and multi-surface content production",
-      "Spatial audio design",
+      "Projection and LED technology coordination",
+      "Fulldome and multi-surface content",
+      "Spatial audio coordination",
       "Show control and automation",
       "Operations training and handover",
     ],
     outcomes: [
       {
-        title: "Signature destinations",
-        description: "Venues become attractions rather than rooms with screens.",
+        title: "Signature environments",
+        description: "Spaces become experiences rather than rooms with screens.",
       },
       {
         title: "Content longevity",
-        description: "Modular show structures allow programming to evolve seasonally.",
+        description: "Modular show structures allow programming to evolve over time.",
       },
       {
-        title: "Sustained performance",
-        description: "Documentation and training keep venues running after handover.",
+        title: "Sustained operation",
+        description: "Documentation and training keep environments running after handover.",
       },
     ],
     useCases: [
       "Visitor and science centres",
       "Cultural and heritage attractions",
-      "Corporate experience centres",
+      "Experience centres",
       "Immersive entertainment venues",
+    ],
+  },
+  {
+    slug: "experience-design-consulting",
+    shortTitle: "Experience Design & Consulting",
+    title: "Experience Design & Consulting",
+    tagline: "From objective to a defined, deliverable experience",
+    summary:
+      "We start with the client's objective and define the experience: concept, narrative, audience journey and the technologies, content and capabilities required to deliver it.",
+    image: "/images/solutions/spatial-computing.jpg",
+    icon: "Compass",
+    capabilities: [
+      "Objective and audience definition",
+      "Experience concept and narrative design",
+      "Visitor journey and interaction design",
+      "Technology and content requirements mapping",
+      "Feasibility and delivery planning",
+      "Specialist capability identification",
+    ],
+    outcomes: [
+      {
+        title: "Clear direction",
+        description: "The experience is defined before technology decisions are made.",
+      },
+      {
+        title: "Right-sized scope",
+        description: "Requirements are mapped to the objective, environment and audience.",
+      },
+      {
+        title: "Deliverable plans",
+        description: "Concepts arrive with a realistic route to production.",
+      },
+    ],
+    useCases: [
+      "Experience concept development",
+      "Immersive programme planning",
+      "Technology and content roadmaps",
+      "Feasibility studies",
+    ],
+  },
+  {
+    slug: "technical-integration",
+    shortTitle: "Technical Integration",
+    title: "Technical Integration",
+    tagline: "Bringing devices, software and content together on site",
+    summary:
+      "Technical coordination and integration of the devices, software, content and specialist services an immersive project depends on — through setup, testing, commissioning and handover.",
+    image: "/images/technology-ecosystem/hero.jpg",
+    icon: "Workflow",
+    capabilities: [
+      "Hardware and device coordination",
+      "Software and platform configuration",
+      "Content deployment and testing",
+      "On-site installation and commissioning",
+      "Operational documentation",
+      "Team training and handover",
+    ],
+    outcomes: [
+      {
+        title: "One working system",
+        description: "Separate components are integrated into a single, tested experience.",
+      },
+      {
+        title: "Predictable go-live",
+        description: "Testing and rehearsal happen before audiences arrive.",
+      },
+      {
+        title: "Operational readiness",
+        description: "Documentation and training are treated as deliverables.",
+      },
+    ],
+    useCases: [
+      "Venue and exhibition installations",
+      "Device fleet setup and configuration",
+      "Experience rollouts across locations",
+      "Event technical delivery",
     ],
   },
 ];

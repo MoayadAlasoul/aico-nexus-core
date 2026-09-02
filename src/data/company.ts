@@ -5,13 +5,14 @@ export const company = {
   shortName: "AICO",
   legalNote: "Advanced Imagination ITS Company (AICO)",
   country: "Saudi Arabia",
-  positioning: "Artificial intelligence, immersive technology and spatial computing",
+  established: "December 2020",
+  positioning: "Immersive technology and digital experience development",
   descriptor:
-    "AICO is a technology and innovation company building intelligent, immersive and spatial systems for organisations operating at national and global scale.",
-  mission:
-    "To engineer intelligent and immersive systems that help organisations understand complex realities and act on them with confidence.",
+    "Advanced Imagination ITS Company (AICO) is a Saudi technology company established in December 2020 and headquartered in Jeddah, Kingdom of Saudi Arabia, specialising in immersive technology and digital experience development.",
   vision:
-    "A future where every organisation can experience its data, its assets and its ambitions in three dimensions.",
+    "To become a globally recognized immersive technology company known for creating engaging, innovative, and future-ready digital experiences that generate meaningful value.",
+  mission:
+    "To help organizations transform ideas into high-quality immersive experiences by combining creativity, emerging technologies, specialist expertise, and a customer-focused delivery approach.",
   contact: {
     email: "info@aico-tech.com",
     addressLines: ["Advanced Imagination ITS Company (AICO)", "Jeddah", "Kingdom of Saudi Arabia"],
@@ -23,127 +24,196 @@ export const company = {
   ],
 };
 
+/** Approved Who We Are narrative (Content V3). */
+export const whoWeAreParagraphs = [
+  "Advanced Imagination ITS Company (AICO) is a Saudi technology company established in December 2020 and headquartered in Jeddah, Kingdom of Saudi Arabia.",
+  "AICO specializes in immersive technology and digital experience development. We help organizations explore and implement new ways to engage customers, enhance experiences, communicate ideas, create content, and bring concepts to life.",
+  "Our work brings together creativity, technology, storytelling, content production, technical coordination, and project delivery. Depending on each project's requirements, we work across immersive technologies including Virtual Reality (VR), Augmented Reality (AR), Mixed Reality (MR), Extended Reality (XR), Spatial Computing, CGI, 3D Visualization, Virtual Production, 360° content, and interactive digital experiences.",
+  "Our approach begins with the client's objective. We then identify and coordinate the appropriate technologies, content, hardware, software, and specialist capabilities required for the project.",
+];
+
+/** Seven approved company values (Content V3). */
+export const values = [
+  {
+    title: "Innovation",
+    description:
+      "We continuously explore emerging technologies and creative approaches that can create new opportunities for our clients.",
+  },
+  {
+    title: "Integrity",
+    description:
+      "We build relationships through transparency, professionalism, and responsible business practices.",
+  },
+  {
+    title: "Excellence",
+    description:
+      "We aim for high standards across experience design, content, technology coordination, and project delivery.",
+  },
+  {
+    title: "Customer Success",
+    description:
+      "We begin with the client's objectives and focus on creating experiences that support meaningful outcomes.",
+  },
+  {
+    title: "Collaboration",
+    description:
+      "We bring together clients, creative specialists, technology providers, and technical expertise around a shared project objective.",
+  },
+  {
+    title: "Continuous Learning",
+    description:
+      "We continuously evaluate new technologies, tools, workflows, and industry developments.",
+  },
+  {
+    title: "Future Thinking",
+    description:
+      "We look beyond today's tools to understand how emerging technologies can shape tomorrow's experiences.",
+  },
+];
+
+/** Delivery principles used on Our Approach and Who We Are. */
 export const principles = [
   {
-    title: "Engineering discipline",
+    title: "Objective first",
     description:
-      "Immersive work is software work. Every experience is built on tested, documented and maintainable foundations.",
+      "Every engagement begins with the client's objective, audience and environment — not with a technology choice.",
   },
   {
-    title: "Design integrity",
+    title: "Creative and technical together",
     description:
-      "Craft is not decoration. Composition, typography and motion carry meaning in everything we deliver.",
+      "Experience design, content and technical coordination are planned as one workstream from the start.",
   },
   {
-    title: "Governed intelligence",
+    title: "The right specialists",
     description:
-      "AI systems ship with evaluation, monitoring and human oversight designed in from the first sprint.",
+      "We identify and coordinate the technologies, providers and specialist capabilities each project requires.",
   },
   {
     title: "Built to hand over",
     description:
-      "Documentation, training and operational readiness are deliverables, not afterthoughts.",
+      "Documentation, training and operational readiness are treated as deliverables, not afterthoughts.",
   },
 ];
 
 export const capabilities: Capability[] = [
   {
-    title: "Applied Artificial Intelligence",
+    title: "Immersive Experience Development",
     description:
-      "Grounded assistants, computer vision and generative pipelines engineered for governed production environments.",
-    icon: "BrainCircuit",
-  },
-  {
-    title: "Immersive Experience Engineering",
-    description:
-      "Real-time engines, extended reality and interactive systems designed for reliability at venue scale.",
+      "Experiences built with VR, AR, MR, XR and spatial computing, coordinated around the objective of each project.",
     icon: "Boxes",
   },
   {
-    title: "Spatial Computing & Digital Twins",
+    title: "Digital Content Production",
     description:
-      "Reality capture, spatial data pipelines and simulation environments that mirror physical assets.",
-    icon: "Scan",
-  },
-  {
-    title: "CGI & Visualization",
-    description:
-      "Photoreal rendering, architectural visualisation and technical animation from a unified asset pipeline.",
-    icon: "Cuboid",
-  },
-  {
-    title: "Creative Technology & Content",
-    description:
-      "Creative direction, motion design and content operations that sustain high-volume output.",
+      "360° content, interactive media, animation and motion authored for immersive formats.",
     icon: "Clapperboard",
   },
   {
-    title: "Digital Transformation",
+    title: "CGI & 3D Visualization",
     description:
-      "Architecture, integration and change enablement that connect new capability to existing systems.",
+      "High-fidelity imagery, environments and animation that communicate concepts before they exist.",
+    icon: "Cuboid",
+  },
+  {
+    title: "Storytelling & Experience Design",
+    description:
+      "Concept, narrative and audience journey design that gives an experience purpose and structure.",
+    icon: "Compass",
+  },
+  {
+    title: "Technology Coordination",
+    description:
+      "Selecting and coordinating the devices, software, content and specialist providers a project requires.",
+    icon: "Network",
+  },
+  {
+    title: "Project & Technical Delivery",
+    description:
+      "Planning, integration, testing, commissioning and handover through to a working experience.",
     icon: "Workflow",
   },
 ];
 
+/** Technology ecosystem positioning copy (Content V3). */
+export const technologyEcosystem = {
+  paragraphs: [
+    "AICO works with specialized technology providers and solution partners to support the requirements of immersive projects.",
+    "Rather than being limited to a single technology or platform, AICO can coordinate the appropriate combination of devices, software, content, production technologies, streaming capabilities, and other specialist components required for each project.",
+    "Our technology ecosystem approach allows us to select and coordinate the technologies that best fit the client's objectives, environment, audience, and operational requirements.",
+  ],
+  /** Only partners with formally established brand-use authorisation. Logos omitted. */
+  partners: [
+    { name: "Neutral Digital", category: "Technology partner" },
+    { name: "MSM.digital", category: "Solution partner" },
+  ],
+};
+
+/**
+ * Enabling technologies we work with — presented as capabilities we coordinate,
+ * not as proprietary platforms owned or developed by AICO.
+ */
 export const technologyLayers: TechnologyLayer[] = [
   {
-    name: "Experience Layer",
+    name: "Immersive Technologies",
     description:
-      "The surfaces people touch — headsets, domes, large-format displays, web, mobile and live broadcast.",
+      "The immersive technologies we work with, selected per project according to the audience and environment.",
     components: [
+      "Virtual Reality (VR)",
+      "Augmented Reality (AR)",
+      "Mixed Reality (MR)",
+      "Extended Reality (XR)",
+      "Spatial Computing",
+      "Interactive digital experiences",
+    ],
+  },
+  {
+    name: "Content & Production Technologies",
+    description:
+      "Production technologies used to create content authored for immersive formats and environments.",
+    components: [
+      "CGI and 3D Visualization",
+      "360° content",
+      "Virtual Production",
+      "Animation and motion",
       "Real-time engines",
-      "XR runtimes",
-      "Web and mobile clients",
-      "Show control",
-      "Broadcast and streaming",
+      "Spatial audio",
     ],
   },
   {
-    name: "Intelligence Layer",
+    name: "Devices & Hardware",
     description:
-      "Models, retrieval and orchestration that turn raw information into grounded, usable answers.",
+      "Devices and display technologies are specified and sourced with specialist providers for each project.",
     components: [
-      "Model orchestration",
-      "Retrieval and vector search",
-      "Computer vision",
-      "Generative pipelines",
-      "Evaluation and guardrails",
+      "Headsets and wearables",
+      "Projection systems",
+      "LED and large-format displays",
+      "Capture and camera systems",
+      "Interaction and sensor hardware",
+      "Show control hardware",
     ],
   },
   {
-    name: "Spatial Data Layer",
+    name: "Software & Platforms",
     description:
-      "The geometric and semantic backbone: captured reality, structured assets and live telemetry.",
+      "Third-party software and platforms are configured and coordinated to suit the operational needs of the experience.",
     components: [
-      "Reality capture",
-      "Digital twin models",
-      "Asset and scene pipelines",
-      "Geospatial services",
-      "Telemetry ingestion",
+      "Experience and application software",
+      "Device configuration and management tooling",
+      "Content management and delivery",
+      "Cloud and rendering services",
+      "Analytics and reporting tools",
     ],
   },
   {
-    name: "Platform & Cloud Layer",
+    name: "Streaming & Distribution",
     description:
-      "Secure, scalable infrastructure with the render, streaming and integration capacity these workloads demand.",
+      "Streaming and distribution capabilities coordinated with specialist production and streaming providers.",
     components: [
-      "Cloud and hybrid infrastructure",
-      "Render and GPU orchestration",
-      "Identity and access",
-      "Integration and APIs",
-      "Observability",
-    ],
-  },
-  {
-    name: "Governance Layer",
-    description:
-      "Security, compliance and operational practice applied consistently across every engagement.",
-    components: [
-      "Security architecture",
-      "Data governance",
-      "AI policy and review",
-      "Quality assurance",
-      "Documentation and handover",
+      "Multi-camera and 360° capture",
+      "Live graphics and overlays",
+      "Streaming and delivery services",
+      "Multi-feed and multi-language delivery",
+      "On-site technical coordination",
     ],
   },
 ];
@@ -151,72 +221,77 @@ export const technologyLayers: TechnologyLayer[] = [
 export const approachPhases: ApproachPhase[] = [
   {
     step: "01",
-    title: "Discover",
+    title: "Understand the objective",
     description:
-      "We map the operating context, stakeholders, constraints and the outcome that defines success.",
-    deliverables: ["Opportunity map", "Stakeholder alignment", "Success metrics"],
+      "We start with the client's objective, audience, environment and the outcome that defines success.",
+    deliverables: ["Objective definition", "Audience and context review", "Success measures"],
   },
   {
     step: "02",
-    title: "Architect",
+    title: "Define the experience",
     description:
-      "Experience, data and platform architecture are designed together so nothing is retrofitted later.",
-    deliverables: ["Solution architecture", "Experience blueprint", "Delivery roadmap"],
+      "Concept, narrative and audience journey are designed before technology decisions are made.",
+    deliverables: ["Experience concept", "Narrative direction", "Journey and interaction design"],
   },
   {
     step: "03",
-    title: "Prototype",
+    title: "Identify technologies & specialists",
     description:
-      "A working vertical slice proves the hardest assumptions before full production begins.",
-    deliverables: ["Interactive prototype", "Technical validation", "Risk register"],
+      "We map the technologies, content, hardware, software and specialist capabilities the project requires.",
+    deliverables: ["Technology requirements", "Provider and specialist mapping", "Feasibility view"],
   },
   {
     step: "04",
     title: "Produce",
     description:
-      "Creative and engineering teams work in one pipeline, with review gates at every milestone.",
-    deliverables: ["Production build", "Asset library", "QA reporting"],
+      "Creative and technical work progresses in one coordinated plan, with review points at each milestone.",
+    deliverables: ["Content production", "Experience build", "Review and QA reporting"],
   },
   {
     step: "05",
-    title: "Deploy",
+    title: "Integrate & deploy",
     description:
-      "Integration, on-site commissioning and rehearsal until the system performs under real conditions.",
-    deliverables: ["Deployed system", "Commissioning report", "Operations runbook"],
+      "Devices, software and content are integrated, tested and commissioned in the real environment.",
+    deliverables: ["Integrated system", "Testing and commissioning", "Operational documentation"],
   },
   {
     step: "06",
-    title: "Evolve",
+    title: "Support & evolve",
     description:
-      "Instrumentation and structured reviews turn the first release into a long-term programme.",
-    deliverables: ["Performance review", "Enhancement backlog", "Team enablement"],
+      "Handover, training and structured reviews keep the experience running and allow it to develop.",
+    deliverables: ["Team training", "Performance review", "Enhancement plan"],
   },
 ];
 
+/**
+ * HIDDEN (Content V3): studio service content is retained for future use but is
+ * no longer surfaced in navigation or on the home page, as no in-house studio or
+ * proprietary production facility is claimed.
+ */
 export const studioServices = [
   {
     title: "Fulldome & Immersive Film",
     description:
-      "Original content authored for dome geometry, multi-surface projection and large-format venues.",
+      "Content authored for dome geometry, multi-surface projection and large-format environments.",
   },
   {
     title: "Virtual Production",
-    description: "LED volume and real-time compositing workflows that collapse post into principal.",
+    description: "Real-time environment and LED volume workflows coordinated with specialist facilities.",
   },
   {
     title: "Animation & Motion",
-    description: "Narrative animation, technical explainers and brand motion systems.",
+    description: "Narrative animation, technical explainers and brand motion content.",
   },
   {
     title: "Real-Time Interactive",
-    description: "Interactive installations and configurators driven by real-time engines.",
+    description: "Interactive installations and configurators built with real-time engines.",
   },
   {
     title: "Spatial Audio",
-    description: "Object-based sound design engineered for the acoustics of the room.",
+    description: "Object-based sound design coordinated for the acoustics of the space.",
   },
   {
     title: "Post & Finishing",
-    description: "Colour, conform and mastering for every distribution format.",
+    description: "Colour, conform and mastering coordinated for each distribution format.",
   },
 ];
