@@ -7,6 +7,9 @@ import { Gallery } from "@/components/ui/gallery";
 import { solutions } from "@/data/solutions";
 import { projects } from "@/data/content";
 
+const SHOW_AREAS_OF_EXPERIENCE = false;
+const SHOW_CAPABILITY_SAMPLES = false;
+
 const title = "Our Experience — AICO Immersive Experience Capabilities";
 const description =
   "The experience AICO brings to immersive projects: experience design, immersive content, CGI and 3D visualization, virtual production, technology coordination and technical delivery.";
