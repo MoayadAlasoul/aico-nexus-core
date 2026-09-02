@@ -11,14 +11,24 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { solutions } from "@/data/solutions";
+
+const projectTypeOptions = [
+  "Immersive Experience",
+  "Immersive Content",
+  "CGI / 3D",
+  "Virtual Production",
+  "Immersive Dome",
+  "Immersive Live Streaming",
+  "Experience Design & Consulting",
+  "Other",
+];
 
 /**
  * Accessible enquiry form. Front-end only for now — wire to a server function
  * or CRM endpoint when the backend is connected.
  */
 export function ContactForm() {
-  const [interest, setInterest] = useState("");
+  const [projectType, setProjectType] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -31,7 +41,7 @@ export function ContactForm() {
         description: "A member of the AICO team will respond shortly.",
       });
       event.currentTarget?.reset?.();
-      setInterest("");
+      setProjectType("");
     }, 600);
   };
 
@@ -39,37 +49,44 @@ export function ContactForm() {
     <form onSubmit={onSubmit} className="surface-panel rounded-xl p-6 sm:p-8" noValidate={false}>
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="contact-name">Full name</Label>
+          <Label htmlFor="contact-name">Name</Label>
           <Input id="contact-name" name="name" autoComplete="name" required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="contact-email">Work email</Label>
+          <Label htmlFor="contact-company">Company</Label>
+          <Input id="contact-company" name="company" autoComplete="organization" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="contact-email">Email</Label>
           <Input id="contact-email" name="email" type="email" autoComplete="email" required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="contact-organisation">Organisation</Label>
-          <Input id="contact-organisation" name="organisation" autoComplete="organization" />
+          <Label htmlFor="contact-phone">Phone</Label>
+          <Input id="contact-phone" name="phone" type="tel" autoComplete="tel" required />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="contact-interest">Area of interest</Label>
-          <Select value={interest} onValueChange={setInterest} name="interest">
-            <SelectTrigger id="contact-interest" aria-label="Area of interest">
-              <SelectValue placeholder="Select a solution" />
+          <Label htmlFor="contact-industry">Industry</Label>
+          <Input id="contact-industry" name="industry" autoComplete="off" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="contact-project-type">Project Type</Label>
+          <Select value={projectType} onValueChange={setProjectType} name="projectType" required>
+            <SelectTrigger id="contact-project-type" aria-label="Project Type">
+              <SelectValue placeholder="Select a project type" />
             </SelectTrigger>
             <SelectContent>
-              {solutions.map((s) => (
-                <SelectItem key={s.slug} value={s.slug}>
-                  {s.shortTitle}
+              {projectTypeOptions.map((option) => (
+                <SelectItem key={option} value={option}>
+                  {option}
                 </SelectItem>
               ))}
-              <SelectItem value="other">Something else</SelectItem>
             </SelectContent>
           </Select>
         </div>
       </div>
 
       <div className="mt-5 space-y-2">
-        <Label htmlFor="contact-message">How can we help?</Label>
+        <Label htmlFor="contact-message">Tell Us About Your Idea</Label>
         <Textarea id="contact-message" name="message" rows={5} required />
       </div>
 
