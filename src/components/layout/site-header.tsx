@@ -113,17 +113,17 @@ export function SiteHeader() {
         <Container size="wide" className="grid gap-8 py-10 lg:grid-cols-[1fr_2fr]">
           <div>
             <p className="text-[0.7rem] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-              Solutions
+              What we deliver
             </p>
             <h2 className="mt-4 font-display text-2xl font-semibold leading-tight">
-              Intelligent, immersive and spatial systems
+              Immersive experiences, content and environments
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Seven connected practices, delivered by one integrated engineering and creative team.
+              Eight core offerings, combined per project around your objective and audience.
             </p>
             <Button asChild variant="outline" size="sm" className="mt-6">
               <Link to="/solutions">
-                View all solutions
+                View all
                 <ArrowRight aria-hidden="true" />
               </Link>
             </Button>

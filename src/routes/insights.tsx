@@ -30,8 +30,8 @@ function InsightsPage() {
     <>
       <PageHero
         eyebrow="Insights"
-        title="Perspectives from our engineering and creative teams"
-        description="Notes on building intelligent and immersive systems — what works, what breaks and what we would do differently."
+        title="Perspectives on immersive experiences and content"
+        description="Notes on creating immersive experiences and digital content — what works, what to plan for and how technology decisions follow the objective."
       />
 
       <Section>
