@@ -11,6 +11,53 @@ const title = "What We Deliver — AICO Immersive Experiences & Content";
 const description =
   "Eight AICO offerings: immersive experiences, immersive content, CGI and 3D visualization, virtual production, immersive live streaming, domes and digital environments, experience design and technical integration.";
 
+/**
+ * Approved card content for /solutions only (Point #6).
+ * Kept local to this page so detail routes and other sections keep their own copy.
+ */
+const approvedCardContent: Record<string, { title: string; description: string }> = {
+  "immersive-experiences": {
+    title: "Immersive Experiences",
+    description:
+      "Engaging interactive experiences designed to place users closer to the story, environment, product, service, or information being presented.",
+  },
+  "immersive-content": {
+    title: "Immersive Content",
+    description:
+      "Premium immersive and interactive content for tourism, hospitality, aviation, entertainment, marketing, culture, training, and other relevant applications.",
+  },
+  "cgi-3d-visualization": {
+    title: "CGI & 3D Visualization",
+    description:
+      "High-quality 3D environments, product visualization, animation, digital assets, and CGI content for interactive and immersive applications.",
+  },
+  "virtual-production": {
+    title: "Virtual Production",
+    description:
+      "Modern production approaches that combine digital environments, real-time visualization, and creative production workflows.",
+  },
+  "immersive-live-streaming": {
+    title: "Immersive Live Streaming",
+    description:
+      "Immersive live experiences that extend selected events beyond the physical venue through appropriate capture, streaming, content delivery, and viewing technologies.",
+  },
+  "immersive-domes-digital-environments": {
+    title: "Immersive Domes & Digital Environments",
+    description:
+      "Large-scale immersive environments and dome experiences developed in different sizes and configurations, including customized immersive content for projection and audiovisual environments.",
+  },
+  "experience-design-consulting": {
+    title: "Experience Design & Consulting",
+    description:
+      "Discovery, concept development, use-case definition, experience planning, technology selection, and user journey design.",
+  },
+  "technical-integration": {
+    title: "Technical Integration",
+    description:
+      "Coordination and integration of the hardware, software, content, devices, infrastructure, and specialist technologies required for each project.",
+  },
+};
+
 export const Route = createFileRoute("/solutions/")({
   head: () => ({
     meta: [
