@@ -58,7 +58,7 @@ export const solutions: Solution[] = [
     tagline: "Digital content authored for immersive formats",
     summary:
       "Digital content production for immersive formats — 360° content, interactive media, animation and motion — developed with creative direction, storytelling and technical coordination.",
-    image: "/__l5e/assets-v1/13fdec6e-881a-448e-8e0b-0f120f347f46/immersive-content.png",
+    image: "/images/solutions/immersive-content.jpg",
     icon: "Clapperboard",
     capabilities: [
       "360° and immersive video content",
@@ -97,7 +97,7 @@ export const solutions: Solution[] = [
     tagline: "High-fidelity imagery for what does not exist yet",
     summary:
       "CGI, 3D visualization and animation that let stakeholders evaluate design intent, environments and concepts with confidence before they are built.",
-    image: "/__l5e/assets-v1/132b19be-82bb-4ddd-bc1f-dd269ea859fe/cgi-3d-visualization.png",
+    image: "/images/solutions/cgi-3d-visualization-v2.jpg",
     icon: "Cuboid",
     capabilities: [
       "Architectural and masterplan visualization",
@@ -135,7 +135,7 @@ export const solutions: Solution[] = [
     tagline: "Real-time environments captured in camera",
     summary:
       "Virtual production workflows that combine real-time environments, LED volumes and camera tracking — coordinated with specialist production partners and facilities per project.",
-    image: "/__l5e/assets-v1/8c018499-d0fe-4e50-9b15-87699ccc2a5b/virtual-production.png",
+    image: "/images/solutions/virtual-production.jpg",
     icon: "Video",
     capabilities: [
       "Virtual production planning",
@@ -174,7 +174,7 @@ export const solutions: Solution[] = [
     tagline: "Live capability for immersive and connected audiences",
     summary:
       "Live streaming capability for immersive formats — multi-camera and 360° capture, real-time graphics and distribution — coordinated with specialist production and streaming providers.",
-    image: "/__l5e/assets-v1/9c71bd81-87d5-4272-b5bf-1dddd4e1f5b3/immersive-live-streaming.png",
+    image: "/images/solutions/immersive-live-streaming-v2.jpg",
     icon: "Radio",
     capabilities: [
       "Multi-camera and 360° capture",
@@ -288,7 +288,7 @@ export const solutions: Solution[] = [
     tagline: "Bringing devices, software and content together on site",
     summary:
       "Technical coordination and integration of the devices, software, content and specialist services an immersive project depends on — through setup, testing, commissioning and handover.",
-    image: "/__l5e/assets-v1/edcfad57-5de1-4e26-acab-f17a3eed1158/technical-integration.png",
+    image: "/images/solutions/technical-integration.jpg",
     icon: "Workflow",
     capabilities: [
       "Hardware and device coordination",
